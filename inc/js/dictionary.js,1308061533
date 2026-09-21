@@ -1,0 +1,13 @@
+function ChangeURLs(br_slova) {
+	if (document.getElementById('dict_letter_link-0').href.match(/.*dict_without/)) {
+		for (var i = 0; i < br_slova; i++)
+			document.getElementById('dict_letter_link-' + i).href = document.getElementById('dict_letter_link-' + i).href.replace(/&dict_without=1/g, '');
+		document.getElementById('dict_letter_link-ALL').href = document.getElementById('dict_letter_link-ALL').href.replace(/&dict_without=1/g, '');
+		document.getElementById('dict_without_search').value = '';
+	} else {
+		for (var i = 0; i < br_slova; i++)
+			document.getElementById('dict_letter_link-' + i).href = document.getElementById('dict_letter_link-' + i).href + '&dict_without=1';
+		document.getElementById('dict_letter_link-ALL').href = document.getElementById('dict_letter_link-ALL').href + '&dict_without=1';
+		document.getElementById('dict_without_search').value = '1';
+	}
+}

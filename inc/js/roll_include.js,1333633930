@@ -1,0 +1,35 @@
+function InvertVisibility(roll_id) {
+	if (document.getElementById(roll_id).style.display=='none') {
+		document.getElementById(roll_id).style.display=''; return true;
+	} else {
+		document.getElementById(roll_id).style.display='none'; return false;
+	}
+}
+
+function SwapImage(themedir, img_id, img1, img2) {
+	if (document.getElementById(img_id).src.substring(document.getElementById(img_id).src.lastIndexOf('/') + 1,document.getElementById(img_id).src.length)==img1.replace(/^.*\//gi, '')) {
+		document.getElementById(img_id).src = themedir + '/images/' + img2;
+	} else {
+		document.getElementById(img_id).src = themedir + '/images/' + img1;
+	}
+}
+
+function UpdateRollPreferences(roll_id) {
+	var cookie = Cookie.read("RollPreferences");
+	var new_cookie = '';
+	if (cookie != null) {
+		var splitCookie = cookie.split(":");
+		var size = splitCookie.length - 1;
+		for (var i = 0; i < size; i++) {
+			if (splitCookie[i] != roll_id) {
+				new_cookie = new_cookie + splitCookie[i] + ":";
+			}
+		}
+		if (new_cookie == cookie) {
+			new_cookie = cookie + roll_id + ":";
+		}
+	} else {
+		new_cookie = roll_id + ":";
+	}
+	Cookie.write("RollPreferences", new_cookie);
+}

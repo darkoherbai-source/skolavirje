@@ -1,0 +1,226 @@
+function JSSelector_unsetSelected(id) {
+	var sel = document.getElementById(id);
+	if (sel)
+		sel.selectedIndex=-1;
+}
+
+//taken from http://weblogs.asp.net/asmith/archive/2003/10/06/30744.aspx
+function JSSelector_XBrowserAddHandler(target,eventName,handlerName) {
+	if ( target.addEventListener ) { 
+		target.addEventListener(eventName, function(e){target[handlerName](e);}, false);
+	} else if ( target.attachEvent ) { 
+		target.attachEvent("on" + eventName, function(e){target[handlerName](e);});
+	} else { 
+		var originalHandler = target["on" + eventName]; 
+		if ( originalHandler ) { 
+			target["on" + eventName] = function(e){originalHandler(e);target[handlerName](e);}; 
+		} else { 
+			target["on" + eventName] = target[handlerName]; 
+		} 
+	} 
+}
+
+function JSSelector_AddOption(sel, key, val, selected) {
+	if (sel)
+		sel.options[sel.options.length] = new Option(val, key, false, selected);
+}
+
+function JSSelector_Select(name) {
+	var unselected = document.getElementById(name + '_unselected');
+	var selected = document.getElementById(name);
+	if (!unselected || !selected)
+		return false;
+	var i;
+	var remove = new Array;
+	for (i = 0; i < unselected.length; i++) {
+		if (unselected.options[i].selected) {
+			JSSelector_AddOption(selected, unselected.options[i].value, unselected.options[i].text, true);
+			remove[remove.length] = i;
+		}
+	}
+	for (i = 0; i < remove.length; i++) {
+		unselected[remove[i]-i] = null;
+	}
+	unselected.selectedIndex = -1;
+        JSSelector_Unselected_groupbuttonsonoff(selected);
+}
+
+function JSSelector_UnSelect(name) {
+	var unselected = document.getElementById(name + '_unselected');
+	var selected = document.getElementById(name);
+	if (!unselected || !selected)
+		return false;
+	var i;
+	var remove = new Array;
+	for (i = 0; i < selected.length; i++) {
+		if (selected.options[i].selected) {
+			JSSelector_AddOption(unselected, selected.options[i].value, selected.options[i].text, true);
+			remove[remove.length] = i;
+		}
+	}
+	for (i = 0; i < remove.length; i++) {
+		selected[remove[i]-i] = null;
+	}
+	selected.selectedIndex = -1;
+	JSSelector_Unselected_groupbuttonsonoff(selected);
+}
+
+function JSSelector_multipleSelected(obj) {
+	if (!obj.options)
+		return false;
+	if (obj.selectedIndex == -1)
+		return false;
+	var sel = 0;
+	for (var i = 0; i < obj.options.length; i++) {
+		if (obj.options[i].selected)
+			sel++;
+		if (sel > 1)
+			return true;
+	}
+	return false;
+}
+
+function JSSelector_hasOptions(obj) {
+	if (obj != null && obj.options != null)
+		return true;
+	return false;
+}
+
+function JSSelector_swapOptions(obj, i, j) {
+	var o = obj.options;
+	var i_selected = o[i].selected;
+	var j_selected = o[j].selected;
+	var temp = new Option(o[i].text, o[i].value, o[i].defaultSelected, o[i].selected);
+	var temp2= new Option(o[j].text, o[j].value, o[j].defaultSelected, o[j].selected);
+	o[i] = temp2;
+	o[j] = temp;
+	o[i].selected = j_selected;
+	o[j].selected = i_selected;
+}
+
+function JSSelector_moveOptionUp(obj) {
+	if (!JSSelector_hasOptions(obj)) { return; }
+	for (i=0; i<obj.options.length; i++) {
+		if (obj.options[i].selected) {
+			if (i != 0 && !obj.options[i-1].selected) {
+				JSSelector_swapOptions(obj,i,i-1);
+				obj.options[i-1].selected = true;
+			}
+		}
+	}
+}			
+
+function JSSelector_moveOptionDown(obj) {
+	if (!JSSelector_hasOptions(obj))
+		return;
+	for (i = obj.options.length - 1; i >= 0; i--) {
+		if (obj.options[i].selected) {
+			if (i != (obj.options.length-1) && ! obj.options[i+1].selected) {
+				JSSelector_swapOptions(obj,i,i+1);
+				obj.options[i+1].selected = true;
+			}
+		}
+	}
+}
+
+function JSSelector_MoveDown(name) {
+	var selected = document.getElementById(name);
+	JSSelector_moveOptionDown(selected);
+}
+
+function JSSelector_MoveUp(name) {
+	var selected = document.getElementById(name);
+	JSSelector_moveOptionUp(selected);
+}
+
+function JSSelector_AddSubmitHandler(name) {
+	var sel = document.getElementById(name);
+	if (sel) {
+		var form = sel.form;
+		eval('form.selectAll_' + name + ' = function(e) { \
+			var i; \
+			var s = document.getElementById(\'' + name + '\'); \
+			if (s) \
+				for ( i = 0; i < s.length; i++) \
+					s.options[i].selected = true; \
+			};');
+		JSSelector_XBrowserAddHandler(form, 'submit', 'selectAll_'+name);
+	}
+	//if this works now I can disable hidden elements
+	var elements = document.getElementsByName(name + '[]');
+	var i;
+	for (i = elements.length - 1; i >= 0; i--) {
+		if (typeof(elements[i].selectedIndex) == 'undefined') {
+			elements[i].name = 'disabled_' + elements[i].name;
+		}
+	}
+}
+			
+
+function JSSelector_isGrouped(option, group_separator, name_separator) {
+	if (!option.text)
+		return false;
+	return ((option.value.indexOf(group_separator) > 0) && ((option.text.indexOf(name_separator) > 0)));
+}
+
+function JSSelector_isSelectionGrouped(obj, group_separator, name_separator) {
+	if (!obj.options)
+		return false;
+	for (var i=0; i<obj.options.length; i++) {
+		if (obj.options[i].selected) {
+			if (JSSelector_isGrouped(obj.options[i], group_separator, name_separator))
+				return true;
+		}
+	}
+	return false;
+}
+
+function JSSelector_group(obj, group_separator, name_separator) {
+	if (!obj.options)
+		return false;
+	var value = '';
+	var text = '';
+	var first_option = null;
+	for (var i = 0; i < obj.options.length; i++) {
+		option = obj.options[i];
+		if (option.selected) {
+			if (first_option) {
+				first_option.value += group_separator + option.value;
+				first_option.text += name_separator + option.text;
+				obj.options[i]._removethis = true;
+			} else {
+				first_option = option;
+			}
+		}
+	}
+	for (var i = (obj.options.length - 1); i >= 0; i--) {
+		if (obj.options[i]._removethis) {
+			obj.options[i] = null;
+		}
+	}
+	JSSelector_Unselected_groupbuttonsonoff(obj);
+	return false;
+}
+
+function JSSelector_ungroup(obj, group_separator, name_separator) {
+	if (!obj.options)
+		return false;
+	for (var i = 0; i < obj.options.length; i++) {
+		if (obj.options[i].selected) {
+			if (JSSelector_isGrouped(obj.options[i], group_separator, name_separator)) {
+				var parts_values = obj.options[i].value.split(group_separator);
+				var parts_names = obj.options[i].text.split(name_separator);
+				if (parts_values.length == parts_names.length && (parts_names.length>1)) {
+					//we can do ungrouping
+					for (var j = 1; j < parts_values.length; j++) {
+						obj.options[obj.options.length] = new Option(parts_names[j], parts_values[j], false, true);
+					}
+					obj.options[i].text = parts_names[0];
+					obj.options[i].value = parts_values[0];
+				}
+			}
+		}
+	}
+	JSSelector_Unselected_groupbuttonsonoff(obj);
+	return false;
+}

@@ -1,0 +1,8 @@
+Locale.define('en-US', 'DatePicker', {
+	select_a_time: 'Odaberite vrijeme',
+	use_mouse_wheel: 'Koristite kotaèiæ mi¹a za brzo mijenjanje vrijednosti',
+	time_confirm_button: 'OK',
+	apply_range: 'Primjeni',
+	cancel: 'Odustani',
+	week: 'tj'
+});

@@ -1,0 +1,172 @@
+initializeWindows = function () {
+
+	/*
+
+	Options:
+		xhr - ajax method, loads href value into window
+	 	iframe - loads href value into iframe window
+		html - writes content html (from options) into window
+
+	*/
+
+	StrixPopup = new Class({
+		Implements: Options,
+		options: {
+			width: 700,
+			height: 400,
+			method: 'xhr',
+			type: 'modal',
+			reload: false,
+			content: null
+		},
+		
+		initialize: function(el){
+		
+			if (el.getProperty('rel')) {
+				this.setOptions(JSON.decode(el.getProperty('rel')));
+			}
+			
+			winID=el.getProperty('id');
+			if (winID!=null) winID='-'+winID;
+			else winID="";
+
+			reload=this.options.reload;
+
+			var size = document.getSize(), scroll = document.window.getScroll();
+
+			//smanji popup ukoliko ne stane na ekran, da ne dobijemo horiz scrollbar
+			if (this.options.width>=size.x) this.options.width=size.x-50;
+			if (this.options.height>=size.y) this.options.height=size.y-70;
+
+			url=el.getProperty('href');
+
+			if (this.options.method=='iframe')
+				url+='&clean_tpl=true';
+
+			new MUI.Modal({
+				id: 'strix-popup'+winID,
+				title: el.getProperty('title'),
+				loadMethod: this.options.method,
+				contentURL: url,
+				content: this.options.content,
+				width: this.options.width,
+				height: this.options.height,
+				type: this.options.type,
+				modalOverlayClose: false,
+				onContentLoaded: function(){
+					if ($$('.mocha-close')) {
+						$$('.mocha-close').each(function(el){
+							el.addEvent('click', function(e){	
+								new DOMEvent(e).stop();
+								MUI.closeWindow(document.id('strix-popup'));
+							});
+						});
+					}
+				}, //end onContentLoaded
+				onCloseComplete: function () {
+					if (reload) {
+						document.location.reload();
+					}
+				}
+			});
+		} //initialize
+	});
+
+	document.id(document.body).addEvent('click:relay(a.strix-popup)', function(ev,el){
+		new DOMEvent(ev).stop();
+		new StrixPopup(el);
+	});
+
+	// Tipsi koji se aktiviraju na onclick event
+	// NOTICE: moglo bi se ovo jos malo srediti...
+
+	var read = function(option, element){
+		return (option) ? (typeOf(option) == 'function' ? option(element) : element.get(option)) : '';
+	};
+
+	Tips.onclick = new Class ({
+		Extends: Tips,
+		attach: function(elements){
+			$$(elements).each(function(element){
+				var title = read(this.options.title, element),
+				text = read(this.options.text, element);
+				element.set('title', '').store('tip:native', title).retrieve('tip:title', title);
+				element.retrieve('tip:text', text);
+				this.fireEvent('attach', [element]);
+
+				var events = ['click', 'leave'];
+				if (!this.options.fixed) events.push('move');
+
+				events.each(function(value){
+					var event = element.retrieve('tip:' + value);
+					if (!event) event = function(event){
+						this['element' + value.capitalize()].apply(this, [event, element]);
+					}.bind(this);
+
+					if (value=='click')
+						element.store('tip:' + value, event).addEvent(value, event);
+					else
+						element.store('tip:' + value, event).addEvent('mouse' + value, event);
+				}, this);
+			}, this);
+
+			return this;
+		},
+
+		elementClick: function (event,element) {
+			this.elementEnter(event,element);
+		}
+	});
+
+	var strixTips = new Class ({
+		initialize: function (cssClass, event) {
+			$$(cssClass).each(function(el,index) {
+				var title = el.get('title');
+				if (title.contains('::')){
+					var content = title.split('::');
+					el.store('tip:title', content[0]);
+					el.store('tip:text', content[1]);
+                                }
+				else {
+					el.store('tip:title', '');
+					el.store('tip:text', title);
+				}
+			});
+			if (event=='click')
+				new Tips.onclick(cssClass, {'className':'strixTips'});
+			else
+				new Tips(cssClass, {'className':'strixTips'}); // css klasa za opis tipsa
+		}
+	});
+
+	new strixTips('.tipper'); //svi elementi sa tipper css klasom imaju tooltipse
+	new strixTips('.tipper-click', 'click');
+
+	$$('.strix-popup').setStyle('visibility','visible');
+}
+
+window.addEvent('domready', function(){
+	initializeWindows();
+
+	Locale.define('hr-HR', 'FormValidator', {
+				required: "Polje ne smije biti prazno.",
+				errorPrefix: "Pogre¹ka: ",
+				maxLength: "Maksimalno {maxLength} znakova (unijeli ste {length} znakova)",
+				oneRequired: "Odaberite jednu od opcija.",
+				url: "Upi¹ite ispravan URL npr. http://www.carnet.hr/"
+	});
+	Locale.define('hr-HR', 'Date', {
+				shortDate: '%d. %m. %Y.',
+				days: [ 'nedjelja', 'ponedjeljak', 'utorak', 'srijeda', 'èetvrtak', 'petak', 'subota' ],
+				days_abbr: ['ned', 'pon', 'uto', 'sri', 'èet', 'pet', 'sub'],
+				months: [ 'sijeèanj', 'veljaèa', 'o¾ujak', 'travanj', 'svibanj', 'lipanj', 'srpanj', 'kolovoz', 'rujan', 'listopad', 'studeni', 'prosinac' ],
+				months_abbr: ['sij', 'velj', 'o¾u', 'tra', 'svi', 'lip', 'srp', 'kol', 'ruj', 'lis', 'stu', 'pro']
+	});
+
+	Locale.use('hr-HR');
+
+});
+
+window.addEvent('unload', function(){
+	$$('.strix-popup').setStyle('visibility','hidden');
+});
