@@ -1,0 +1,151 @@
+
+	<script type="text/javascript">
+
+		function is_valid_email(email, field_name) {
+			console.log(email);
+			if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(?:[a-zA-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)$/.test(email)) {
+				document.getElementById(field_name).className = 'green';
+				if (field_name == 'friend_email') {
+					document.emailforma.emailsend.disabled = false;
+				}
+				return false;
+			} else {
+				document.getElementById(field_name).className = 'red';
+				document.emailforma.emailsend.disabled = true;
+				return false;
+			}
+
+			return true;
+		}
+
+		function is_valid_name(input) {
+
+			if (/^[a-zA-ZèÈæÆ¹©¾®ðÐ ]+$/.test(input) || input == "") {
+				document.getElementById('your_name').className = 'green';
+				return false;
+			} else {
+				document.getElementById('your_name').className = 'red';
+				document.emailforma.emailsend.disabled = true;
+				return false;
+			}
+
+			return true;
+		}
+
+		function textCounter(field, countfield, maxlimit) {
+
+			if (field.value.length > maxlimit)
+				field.value = field.value.substring(0, maxlimit);
+			else
+				countfield.innerHTML = maxlimit - field.value.length;
+
+			if (/(wwww?|)\.[-a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#\/%=~_|]/i.test(field.value)) {
+				document.getElementById('message').className = 'red';
+				return false;
+			} else {
+				document.getElementById('message').className = 'green';
+				return true;
+			}
+		}
+
+	</script>
+	<style>
+
+		body{
+			padding:10px;
+		}
+
+		.red{
+			background-color: #faa3af;
+		}
+		.green{
+			background-color: #a3faa9;
+		}
+		a.mocha-close:hover {
+			background-color:#DDDDDD;
+			color:#000000;
+			text-decoration:none;
+		}
+		a.mocha-close {
+			border:1px solid #DDDDDD;
+			color:#000000;
+			display:block;
+			font-family:verdana;
+			font-size:11px;
+			font-weight:bold;
+			margin:20px auto;
+			padding:4px;
+			text-decoration:none;
+			width:100px;
+			margin: 20px auto;
+		}
+		#poruka{
+			border:1px solid #DDDDDD;
+			color:#000000;
+			display:block;
+			font-family:verdana;
+			font-size:11px;
+			font-weight:bold;
+			padding:4px;
+			text-decoration:none;
+			width:390px;
+			text-align: center;
+		}
+
+		table{
+			font-family:verdana;
+			font-size:11px;
+		}
+
+		#emailsend {
+			float:right;
+		}
+
+		#recaptcha_widget_div{
+			float: right;
+		}
+
+		#chars_count {
+			float: right;
+		}
+
+	</style>
+
+		<form action="http://os-fvsignjara-virje.skole.hr/roditelji/informacije?only_mod_instance=69_278_0&amp;sendemail=1" id="emailforma" name="emailforma" method="post" >
+		<table border="0">
+			<tr>
+				<td><label>Va¹e ime:</label></td>
+				<td><input type="text" onblur="is_valid_name(this.value);" id="your_name" name="your_name" size="20"  /></td>
+			</tr>
+			<tr>
+				<td><label>Va¹ email:</label></td>
+				<td><input type="text" onblur="is_valid_email(this.value, this.name);" id="your_email" name="your_email" size="30"  /></td>
+			</tr>
+			<tr>
+				<td><label>Email primatelja:</label></td>
+				<td><input type="text" onblur="is_valid_email(this.value, this.name);" id="friend_email" name="friend_email" size="30"  /></td>
+			</tr>
+			<tr>
+				<td><label>Poruka</label></td>
+				<td>
+					<textarea rows="5" cols="31" id="message" name="message" onblur="textCounter(this.form.message, document.getElementById('chars_left'), 160);"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><div id="chars_count"><label>Preostalo znakova: </label><span id="chars_left" name="chars_left">160</span></div></td>
+			</tr>
+			<tr>
+				<td colspan="2"><script src="https://www.google.com/recaptcha/api.js?hl=hr"></script>
+<div class="g-recaptcha" data-sitekey="6LepkAMTAAAAAIjEIZVngRKlqARlyxLdlz_TJnVO"></div></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<input type="submit" id="emailsend" name="emailsend" 
+						   disabled="disabled" value="Po¹alji" />
+				</td>  
+			</tr>
+			<input type="hidden" value="" name="taf_url" />
+		</table>
+	</form> 
