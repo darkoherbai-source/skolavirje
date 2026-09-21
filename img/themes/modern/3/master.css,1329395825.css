@@ -1,0 +1,1869 @@
+
+/****************      MASTER CSS     ******************/
+/*******************************************************/
+
+html{
+   margin:0px;
+   padding:0px;
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+body {
+	margin:0px;
+	padding:0px;
+	background-color: #f9ecd6;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+form {
+	margin:0px;
+	padding:0px;
+	display:block;
+        border:0px;
+}
+img {
+	border: 0;
+}
+.table td, .text {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#okvir {
+	width: 963px;
+	background-image: url(images/sjena-d.gif);
+	-moz-background-clip: -moz-initial;
+	-moz-background-origin: -moz-initial;
+	-moz-background-inline-policy: -moz-initial;
+	font-size: 1.2em;
+	background-position: right;
+	background-repeat: repeat-y;
+}
+#okvir-sjena-gore {
+	width:6px;
+	height:7px;
+	background-image: url(images/sjena-d-gore.gif);
+	float:right;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+#glavni {
+	width:955px;
+	background-color: #faaf3a;
+	float:left;
+	text-align: left;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;		
+}
+
+html > body #glavni {
+width:955px;
+}
+
+/* bread crumps */
+#navbar {
+	height:26px;
+	line-height:26px;
+	background-image: url(images/bg_navbar.gif);
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#ffffff;
+	vertical-align: middle;
+	padding-left:6px;
+	border-top:1px solid #000000;
+}
+#navbar a {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#ffffff;
+	text-decoration: none;
+}
+#navbar a:hover {
+	color:#ffcb5e;
+}
+/* kraj bread crumps */
+
+
+/* glavni tj. srednji stupac na stranici */
+#glavni-stupac {
+	background-repeat: repeat-y;
+	background-position: left;
+	background-color:#F2FCFC;
+	float:left;
+	width:550px;
+	border:1px solid #000000;
+	display:block;
+	font-size:10px;
+}
+
+html>body #glavni-stupac {
+        margin-left:5px;
+}
+
+.glavni-shadow-in {
+	background-image: url(images/bg_glavni_stupac.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+	background-color:#F2FCFC;
+	font-size:12px;
+}
+.glavni-shadow-in table  {
+ font-size:12px;
+}
+.glavni-shadow-in ul {
+	margin-left:-20px;
+}
+.glavni-stupac-header{
+	background-image: url(images/bg_glavni_header.gif);
+	background-repeat: repeat-x;
+	height:8px;
+	width:100%;
+	background-color:#044444;
+	float:left;
+}
+.glavni-iznutra {
+	width:98%;
+	padding:5px 0px 0px 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	text-align:justify;
+	float:none;
+}
+html>body .glavni-iznutra {
+	width:96%;
+}
+.glavni-iznutra div.opsirnije-okvir {
+	height:30px;
+	line-height:30px;
+	text-align:right;
+}
+.glavni-iznutra a.opsirnije, #blog-root A {
+	color:#ed9210;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:right;
+}
+.glavni-iznutra a.opsirnije:hover {
+	text-decoration:underline;
+}
+.glavni-iznutra p {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	text-align:justify;
+}
+
+.glavni-iznutra p.naslov {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#000000;
+	margin:2px 0px 10px 0px;
+	padding:0px;
+}
+.glavni-iznutra .lead-img {
+	border:1px solid #4c9067;
+	float:left;
+	margin-right:10px;
+	display:block;
+}
+.glavni-iznutra p img {
+	border: 0;
+}
+.glavni-zaglavlje {
+	padding-left:10px;
+	background-color:#9f4000;
+	height:24px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#ffffff;
+	position: relative;
+}
+.glavni-zaglavlje-subunsub {
+	position: absolute;
+	top: 0.25em;
+	right: 0.25em;
+	width: 7px;
+	height: 7px;
+}
+.glavni-footer {
+	background-color:#4c9067;
+	height:10px;
+	font-size:10px;
+}
+.opsirnije {
+	color:#ed9210;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:right;
+}
+.opsirnije:hover{
+	text-decoration:underline;
+}
+.objavio {
+	color:#9E9D9D;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	text-align:right;
+	padding-right: 5px;
+}
+.objavio a {
+	color:#9E9D9D;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	text-decoration:none;
+}
+.objavio a:hover{
+	color#9e9d9d;
+	text-decoration:underline;
+}
+.lajna {
+	height:1px;
+	float:none;
+	border-bottom:1px solid #4c9067;
+	width:99%;
+	font-size:1px;
+	display:block;
+	clear:both;
+}
+
+/* kraj za glavni stupac*/
+/************************/
+
+
+/* alati za stranicu- prethodna, print */
+.alati-sadrzaj-gore{
+	float: right;
+	text-align:right;
+	height: auto;
+	width: auto;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+.alati-sadrzaj-gore a img{
+	padding: 4px 4px 0px 4px;
+	display:block;
+}
+
+/* horizontalni linkovi gore u headeru */
+#horizontalni-linkovi {
+	height:26px;
+	line-height:26px;
+	background-image: url(images/bg_navbar.gif);
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 0px;
+	font-weight: bold;
+	color:#ffffff;
+	vertical-align: middle;
+	padding-left:6px;
+	border-top:1px solid #000000;
+	border-bottom:1px solid #000000;
+	
+}
+#naziv-skole {
+	font-size:18px;
+	color:#ffffff;
+	font-weight:bold;
+	float:left;
+}
+
+.site-link {
+	font-size:15px;
+	color:#ffffff;
+	font-weight:bold;
+	text-decoration:none;
+	width:auto;
+}
+
+.horiz-link {
+	background-image: url(images/link-horiz-strelica-bg.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 3px;
+	padding-left:6px;
+	padding-right:8px;
+	font-size: 10px;
+}
+.horiz-link:hover {
+	background-color: #f8ca82;
+}
+
+/* desni stupac */
+#desni-stupac {
+	float:right;
+	width: 218px;
+	background-image: url(images/sjena-d2.gif);
+	background-repeat: repeat-y;
+	background-position: right;
+}
+html>body #desni-stupac {
+	width:217px;
+}
+#desni-stupac-footer {
+	height:7px;
+	background-image:url(images/sjena-d2-f.gif);
+	background-repeat:repeat-x;
+	width: 218px;
+	float:left;
+}
+
+html>body #desni-stupac-footer {
+	width:217px;
+}
+
+#desni-stupac-footer-d {
+	background-image:url(images/sjena-d2-f-desno.gif);
+	width:10px;
+	height:7px;
+	display:block;
+	float:right;
+}
+#desni-stupac-footer-l {
+	background-image:url(images/sjena-d2-f-lijevo.gif);
+	width:9px;
+	height:7px;
+	float:left;
+}
+#desni-stupac-kut-dg {
+	width:5px;
+	height:9px;
+	background-image: url(images/sjena-d2-gore.gif);
+	float:right;
+	vertical-align: top;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+#desno-inside {
+	width:211px;
+	border:1px solid #9f4000;
+	text-align:right;
+	display:block;
+	float:left;
+}
+html>body #desno-inside {
+	width:210px;
+}
+/* kraj desni stupac */
+
+.input-text {
+	width:160px;
+	background-image:url(images/bg_input.gif);
+	border:1px solid #1F4866;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.input-text:focus {
+	background-image:url(images/bg_input_hover.gif);
+}
+input[type=text] {
+	background-image:url(images/bg_input.gif);
+	border:1px solid #1F4866;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+input[type=text]:focus {
+	background-image:url(images/bg_input_hover.gif);
+}
+select {
+	height:18px;
+	border:1px solid #1F4866;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+
+#footer {
+	clear:both;
+	background-color:#d85703;
+	width:955px;
+	font-size:11px;
+	font-weight:normal;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	height:20px;
+	line-height:20px;
+	display:block;
+	text-align:center;
+
+}
+#footer a{
+	font-size:11px;
+	font-weight:normal;
+	color:#ffffff;
+	text-decoration:none;
+}
+#footer a:hover{
+	font-size:11px;
+	font-weight:normal;
+	color:#ffffff;
+	text-decoration:underline;
+}
+/***************************************************************/
+/************* MODULI LIJEVA I DESNA STRANA ********************/
+/***************************************************************/
+
+
+/*header za module  i unutrasnjost headera (mod-head-in)*/
+.mod-lijevo-head {
+	width:170px;
+	height:24px;
+	line-height:24px;
+	border:1px solid #a14201;
+	background-image: url(images/mod_header_bg.gif);
+	background-repeat:repeat-x;
+	font-family:tahoma, Arial, Helvetica, sans-serif;
+	font-size:17px;
+	color:#ffffff;
+	font-style:italic;
+	font-weight:bold;
+	text-align:right;
+	position: relative;
+}
+.mod-head-lijevo-subunsub {
+	position: absolute;
+	top: 0.25em;
+	left: 0.25em;
+	width: 7px;
+	height: 7px;
+}
+.mod-head-in {
+	padding-right:7px;
+}
+.mod-lijevo-body {
+	width:170px;
+	background-color: #ffcb5e;
+	border-bottom:1px solid #a14201;
+	border-left:1px solid #a14201;
+	border-right:1px solid #a14201;
+	padding-top:5px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000000;
+	font-weight:normal;
+	margin-bottom:2px;
+	display:block;
+}
+.mod-head-desno {
+	width:100%;
+	height:24px;
+	line-height:24px;
+	background-image: url(images/mod_header_bg.gif);
+	background-repeat:repeat-x;
+	border-bottom:1px solid #086b3a;
+	float:left;
+	font-family:tahoma, Arial, Helvetica, sans-serif;
+	font-size:17px;
+	color:#ffffff;
+	font-style:italic;
+	font-weight:bold;
+	text-align:right;
+	position: relative;
+}
+.mod-head-desno-subunsub {
+	position: absolute;
+	top: 0.25em;
+	left: 0.25em;
+	width: 7px;
+	height: 7px;
+}
+
+/* padding lijevo-desno 3px */
+.pld3 {
+	padding-left:3px;
+	padding-right:3px;
+	display:block;
+}
+.mod-podnaslov {
+	background-color:#ffcb5e;
+	font-size:11px;
+	font-weight:bold;
+	color:#000000;
+	min-height:18px;
+	line-height:18px;
+/*	border-bottom:1px solid #f2fcfc;*/
+	width:100%;
+	display:block;
+	text-decoration:none;
+}
+.mod-footer {
+	background-color:#ffcb5e;
+	font-size:11px;
+	font-weight:bold;
+	color:#000000;
+	height:12px;
+	line-height:12px;
+	margin-bottom:1px;
+	width:100%;
+	display:block;
+	text-decoration:none;
+}
+.mod-body-in a.zatvori:link, .mod-body-in a.zatvori:visited {
+	background-color:#ffcb5e;
+	font-size:11px;
+	font-weight:bold;
+	color:#000000;
+	width:99%;
+	padding-left:3px;
+	background-image:url(images/podmeni-zatvori-off.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+	display:block;
+	text-decoration:none;
+	margin-bottom:1px;
+/*	height:18px;*/
+	line-height:18px;
+}
+.mod-body-in a.zatvori:hover {
+	text-decoration:none;
+	background-color: #Efefef;
+	background-image:url(images/podmeni-zatvori-on.gif);
+}
+.mod-podnaslov a{
+	text-decoration:none;
+	color:#000000;
+
+}
+.mod-podnaslov a:hover{
+	text-decoration:underline;
+	color:#000000;
+
+}
+.mod-body-in a.otvori:link, .mod-body-in a.otvori:visited {
+	background-color:#ffcb5e;
+	font-size:11px;
+	font-weight:bold;
+	color:#000000;
+	width:99%;
+	padding-left:3px;
+	background-image:url(images/podmeni-otvori-off.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+	display:block;
+	text-decoration:none;
+	margin-bottom:1px;
+/*	height:18px;*/
+	line-height:18px;
+}
+.mod-body-in a.otvori:hover {
+	text-decoration:none;
+	background-color: #Efefef;
+	background-image:url(images/podmeni-otvori-on.gif);
+}
+.mod-podnaslov div.lijevo {
+	padding-left:3px;
+	float:left;
+}
+.mod-podnaslov div.desno {
+	padding-right:3px;
+	float:right;
+}
+.mod-desno-body {
+	width:100%;
+	background-color: #ffffff;
+	float:left;
+	height:auto;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	text-align:left;
+	display:block;
+}
+.mod-body-in {
+	padding:4px;
+	text-align:left;
+	font-size:11px;
+	display:block;
+}
+.mod-body-in a, .anketa-komentar .gumb {
+	font-size:11px;
+	font-weight:bold;
+	color:#ed9210;
+	text-decoration: none;
+
+}
+.mod-body-in a:hover, .anketa-komentar .gumb:hover {
+	text-decoration:underline;
+	background-color:transparent;
+}
+
+div#lijevi-stupac .mod-body-in a {
+	color:#9f4000;
+}
+
+.mod-body-in ul {
+	margin: 5px 0px 0px 20px;
+	padding: 0px;
+	list-style-type: disc;
+	list-style-image:   url(images/bullet.gif);
+	list-style-position: outside;
+}
+.mod-body-in li {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+
+}
+a.gumb, input[type=submit], input[type=button] {
+	background-color:#ed9210;
+	border:1px solid #9f4000;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#ffffff;
+	text-decoration:none;
+	height:18px;
+	padding-bottom:1px;
+	padding-top:0px;
+	margin:0px;
+}
+a.gumb {padding:0 5px 0 5px;}
+
+.anketa-komentar .gumb {background:none;border:none;}
+.anketa-wrapper .gumbi .s1 {display:block;margin-bottom:10px;}
+
+html>body a.gumb, input[type=submit] {
+	padding-bottom:3px;
+}
+a.gumb:hover, input[type=submit]:hover, input[type=button]:hover {
+	background-color:#faaf3a;
+	text-decoration:none;
+}
+
+
+div.gumbi {
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:4px;
+}
+#lijevi-stupac {
+	width:175px;
+	float:left;
+	margin-right:3px;
+	display:block;
+}
+#footer-sjena {
+	font-size:1px;
+	width:966px;
+	height:9px;
+	background-image: url(images/glavni-footer.gif);
+	background-position:right;
+
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+/***************   KALENDAR  *************/
+/*****************************************/
+div#kalendar-header {
+	font-size:14px;
+	margin-right:7px;
+	margin-top:20px;
+}
+
+div#kalendar-header .title{font-size:18px;}
+div#kalendar-header .buttons {width:230px;}
+
+div#kalendar-header .btn {
+	border-left:1px solid #ffffff;
+	border-top:1px solid #ffffff;
+	border-right:1px solid #9f9f9f;
+	border-bottom:1px solid #9f9f9f;
+	background-color:#FAAF3A;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+	text-align:center;
+	font-size:13px;
+	color:#ffffff;
+	width:60px;
+	float:right;
+	margin:1px;
+}
+
+div#kalendar-header .btn:hover {background-color:#FFCB5E;}
+
+div#kalendar-header .btn a{
+	font-size:13px;
+	color:#ffffff;
+	text-decoration:none;
+	padding-top:5px;
+	font-weight:normal;
+}
+
+.monthTitle{width: auto; background-color: #FFCB5E; text-align: center;color: #4176ad; height:18px;}
+.monthTitle a{font-family: verdana, arial; font-size: 11px;font-weight: bold;text-decoration: none;color: #086A3B;}
+
+div.calHours {background-color:#e4e4e4;}
+div.calMonthBig {background-color:#FFCB5E;width:100%;height:400px;position:relative;border:1px solid;text-align:left;margin: 0;padding: 0;color:#000000;}
+div.headrowcell {color:#000000}
+
+/**** kalendar veliki - mjesecni prikaz ****/
+table.cal-month {background-color:#f4f4f4;}
+
+table.cal-month tr.weekday {
+	font-weight:bold;
+	font-size:13px;
+	text-align:center;
+	height:30px;
+}
+
+table.cal-month tr.weekday td {
+	width:14%;
+	background-color: #FFCB5E;
+	border-bottom: 3px solid #9F4000;
+}
+
+table.cal-month tr.days {
+	background-color:#f8f8f8;
+	height:50px;
+	font-size:11px;
+}
+
+
+table.cal-month tr.days td a.mod_tijelo_kalendar_dogadanje:hover,
+table.cal-month tr.days td a:hover {
+	font-weight:bold;
+}
+
+/* naziv dogaðaja u celiji */
+table.cal-month tr.days td a.event {
+	color:#000000;
+	display:block;
+	margin-top:4px;
+	background-color:#f7eee4;
+	font-weight:normal;
+}
+
+table.cal-month tr.days td.mod_tijelo_kalendar_prosli a,
+table.cal-month tr.days td.mod_tijelo_kalendar_buduci a,
+table.cal-month tr.days td.mod_tijelo_kalendar_buduci,
+table.cal-month tr.days td.mod_tijelo_kalendar_prosli{
+	color:#b2b2b2;
+}
+
+/*** cal month small ***/
+table.cal-month.m-small {background:none;font-family: Verdana, Arial; background-color: #F2FCFC; border-spacing:1px;}
+table.cal-month.m-small tr.weekday {height:18px;border-bottom:1px solid #b0ae9f;}
+table.cal-month.m-small tr.weekday td{font-size:10px; color:#000000;font-family:verdana,arial; background-color:#ffffff;border:none;text-align:center;border-bottom:1px solid #f4f4f4}
+
+table.cal-month.m-small tr.days {
+	height:16px;
+	background:none;
+}
+table.cal-month.m-small tr.days td {
+	font-size:10px;
+	text-align:right;
+	background-color:#fff;
+	border:1px solid #fff;
+}
+
+table.cal-month.m-small tr.days td a{
+	display:block;
+	font-weight:normal;
+	text-decoration:underline;
+	font-size:10px;
+	padding:1px;
+}
+
+table.cal-month tr.days td.mod_tijelo_kalendar_dogadanje {background-color:#FFCB5E;}
+table.cal-month tr.days td.mod_tijelo_kalendar_danas {background-color: #FAAF3A; border: 1px solid #9F4000;}
+table.cal-month tr.days td:hover {background-color:#FFCB5E; border:1px solid #9f4000;}
+
+table.cal-month.m-small td.mod_tijelo_kalendar_danas a {color: #8e2020;}
+table.cal-month.m-small td.mod_tijelo_kalendar_danas a:hover {color:#20666E;}
+/** end cal month small ***/
+/* genericke klase modula (uvijek postoje na <td> i <a>:
+ *      mod_tijelo_kalendar_dogadanje - ukoliko postoji neki dogadjaj na taj dan
+ *      mod_tijelo_kalendar_danas
+ */
+
+/* dan u mjesecu */
+table.cal-month tr.days td a.mod_tijelo_kalendar_dogadanje, table.cal-month tr.days td, table.cal-month tr.days td a {
+	color:#000000;
+	text-decoration:none;
+	background:none;
+}
+
+div.cal-day {
+	font-size:12px;
+	border:2px solid #ffffff;
+	padding:4px;
+}
+
+.cal-show {font-size:11px;}
+
+table.cal-month tr.days td.cal_weekend { background-color: #E5E5E5;}
+table.cal-month.m-small tr.days td.cal_weekend { background-color: #E5E5E5;}
+/*********** KRAJ KALENDAR ****************/
+/******************************************/
+
+
+
+
+
+/***************************************************************/
+/*********************** SPAJALICA *****************************/
+/***************************************************************/
+#spajalica-meni {
+	font-size:11px;
+	color:#ffffff;
+	font-weight:normal;
+	background-color:#4c9067;
+	text-align:center;
+	padding-top:3px;
+	padding-bottom:3px;
+	width:100%;
+	color:#cccccc;
+	border-top:1px solid #cccccc;
+}
+#spajalica-meni a {
+	color:#ffffff;
+	text-decoration:none;
+	width:100%;
+	border-bottom:2px solid #afc3cc;
+}
+#spajalica-meni a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	width:100%;
+	border-bottom:3px solid #ffffff;
+}
+#spajalica-meni a.selected {
+	color:#ffffff;
+	text-decoration:none;
+	width:100%;
+	border-bottom:3px solid #ffffff;
+}
+.spajalica-tbl-one {
+		border-collapse:collapse;
+		border:2px solid #cccccc;
+}
+.spajalica-tbl-one th{
+	text-align:left;
+	font-size:11px;
+	font-weight:bold;
+	background-color: #efefef;
+	border:1px solid #cccccc;
+	padding-left:4px;
+}
+.spajalica-tbl-one td{
+	padding-left:4px;
+	text-align:left;
+	font-size:11px;
+	font-weight:normal;
+	background-color:#FFFFFF;
+	border:1px solid #cccccc;
+}
+.spajalica-tbl-one a {
+	color:#ed9210;
+	text-decoration:none;
+}
+.spajalica-tbl-one a:hover {
+	color:#346DA8;
+	text-decoration:none;
+	font-weight:bold;
+}
+#spajalica-meni .enabled {
+	background-color:#7E9AA9;
+}
+#spajalica-meni .enabled:hover {
+	background-color:#AFC3CC;
+}
+/***************************************************************/
+/*********************** KRAJ SPAJALICA ************************/
+/***************************************************************/
+
+
+
+
+
+/***************************************************************/
+/*************************** SITEMAP ***************************/
+/***************************************************************/
+.mapaweba {
+	margin-left:15px;
+}
+.mapaweba a.sitestyle{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#ed9210;
+	text-decoration:none;
+}
+.mapaweba a.sitestyle:hover{
+	text-decoration:underline;
+}
+.mapaweba a.pagestyle{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#ed9210;
+	text-decoration:none;
+}
+.mapaweba a.pagestyle:hover{
+	text-decoration:underline;
+}
+.mapaweba a.pagestyle2{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#ed9210;
+	text-decoration:none;
+}
+.mapaweba a.pagestyle2:hover{
+	text-decoration:underline;
+}
+/***************************************************************/
+/*********************** KRAJ SITEMAP **************************/
+/***************************************************************/
+
+
+
+
+
+
+/***************************************************************/
+/***************************** RSS *****************************/
+/***************************************************************/
+a.rss {
+	font-size:12px;
+	font-weight:bold;
+	color:#ed9210;
+	text-decoration: none;
+}
+.rss-naslov {
+border-left: 1px solid #ffffff; border-right: 1px solid #ffffff; padding: 4px; display: block; background-color: #dcdcdc; font-weight: bold;
+
+}
+
+
+
+.rss-bg-gumbic {
+background-color:#ffcb5e;
+}
+
+/***************************************************************/
+/*************************** KRAJ RSS **************************/
+/***************************************************************/
+
+
+
+
+
+
+/***************************************************************/
+/***************************** FAQ *****************************/
+/***************************************************************/
+a.faq:link, a.faq:visited{
+	font-size:12px;
+	font-weight:normal;
+	color:#ed9210;
+	text-decoration: none;
+}
+a.faq:hover {
+	text-decoration:underline;
+}
+.text_pitanje{
+	width: auto;
+	border-left:1px solid #346da8;
+	border-top:1px solid #346da8;
+	margin: 20px 0px 0px 10px;
+	padding: 7px 30px 7px 17px;
+	background-color: #ffffff;
+	font-family: Verdana, sans-serif;
+	font-size:11px;
+	font-weight: bold;
+	color: #444444;
+}
+.text_odgovor{
+	width: auto;
+	margin-left: 10px;
+	border-left:1px solid #346da8;
+	font-size:11px;
+	padding: 7px 30px 14px 30px;
+	background-color: #ffffff;
+	font-family: Verdana, sans-serif;
+	font-weight: normal;
+	color: #000000;
+}
+.text_odgovorio{
+	width: auto;
+	border-left:1px solid #346da8;
+	border-bottom:1px solid #346da8;
+	font-size:11px;
+	margin: 0px 0px 20px 10px;
+	padding: 1px 30px 1px 30px;
+	background-color: #f2f2f2;
+	font-family: Verdana, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-align: right;
+	color: #999999;
+}
+
+/***************************************************************/
+/*************************** END FAQ ***************************/
+/***************************************************************/
+
+.small, .small a {
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+}
+
+
+select {
+        height:auto;
+}
+
+/************************ LAYOUT EDIT/MOD BLUE/TABS**************/
+
+.bptabs { background-color: #9f4000; color: #FFFFFF; }
+.bpdark { background-color: #9f4000 !important; color: #FFFFFF; }
+.bptabs TD { white-space: nowrap; }
+.bptabs TH { white-space: nowrap; }
+.bptabs, .bptabs A, .bptabs A:link, .bptabs A:visited { background-color: #9f4000; color: #ffffff; text-decoration: none; }
+.bptabs a:hover {text-decoration:underline;}
+.bptabs A { padding: 0; }
+.bptabs .active {background-color: #9f4000; color: #ffffff; font-weight: normal;border-bottom:2px solid #ffffff; }
+
+.bptabs .active A, .bptabs .active A:visited {background-color: #9f4000; color: #ffffff; font-weight: normal; }
+.bptabs .active a:hover {text-decoration:none}
+
+
+
+.bptabs .disabled { background-color: #9f4000; color: #A0A0A0; }
+.bptable, .bptable DIV, .bptable TD, .bptable IMG { background-color: #F4F4F4; }
+.bptable TH { background-color: #D0D0D0; }
+.bptitle TD, .bptitle TH { color: #FFFFFF; background-color: #949494; }
+.bptitle H2 { font-size: 12pt; font-weight: bold; text-align: left; padding: 0.2em; margin: 0; }
+.bptable2 TH { white-space: nowrap; }
+.bptable2 TD { text-align: left; vertical-align: top; }
+.bptable2 TD.hi, .bptable2 .hi TD, .bptable2 .hi A, .bptable2 .hi A:visited { color: #949494; background-color: #FFFFFF; }
+.bptable3 TD.hi, .bptable3 .hi TD, .bptable3 .hi A, .bptable3 .hi A:visited { color: #949494; background-color: #FFFFFF; }
+.bptable3, .bptable3 TH, .bptable3 TD { border-style: solid; border-width: 1px; border-color: #E7DFDE; }
+.bptable3 TH { background-color: #c1ccd8; font-weight: bold; text-align: left; white-space: nowrap; vertical-align: top; }
+.bptable3 TH.bpgray { background-color: #E7DFDE; font-weight: normal; text-align: left; white-space: nowrap; vertical-align: top; }
+.bptable3 TD { text-align: left; vertical-align: top; background-color: #FFFFFF; }
+.bpnodata { display: block; font-style: italic; font-weight: bold; text-align: left; padding-left: 2em; }
+.lightblue { display: block; width: 100%; background-color: #DCDCDC; padding: 2px; }
+.bpsubtitle { display: block; width: 100%; font-weight: bold; color: #000000; padding: 1em; padding-right: 0; }
+.bptline, .bptline IMG { background-color: #E7DFDE !important; border-style: none !important; padding: 0 !important; }
+.bpdark .acl-link, .bpdark .acl-link A, .bpdark .acl-link A:link, .bpdark .acl-link A:visited { background-color: transparent !important; color: #FFFFFF; }
+.bpdark .acl-link A:hover { text-decoration: underline; }
+
+.bpcontrol { background-color: #FFFFFF; color: #000000; padding: 0; margin: 0; text-align: center; vertical-align: middle; width: 24px; height: 24px; border-width: 1px; cursor: pointer; }
+/* .bpmaintable, .bptable TH, .bptable TD { border-style: solid; border-width: 1px; border-color: #FFFFFF; } */
+.bpmaintable, .bpmaintable TH, .bpmaintable TD { border-style: solid; border-width: 1px; border-color: #FFFFFF; }
+.bptable TH, .bptable TD { border-style: none; }
+
+.bpred, .bpred:link, .bpred:visited { color: #949494; text-decoration: none; }
+.bpred:hover { text-decoration: underline; color: #949494; }
+.bpred:active { text-decoration: none; }
+A.bpred { text-transform: uppercase; }
+.bpmtitle { font-size: 11pt; font-weight: bold; color: #949494; }
+.bpdisabled { font-size: 24pt; font-weight: bold; color: #E00000; }
+.bpframed { background-color: #F0F0F0; border-style: solid; border-width: 1px; border-color: #C0C0C0; }
+
+.paging TH, .paging TD { color: #000000; background-color: #EEEEEE; }
+
+
+#bp-editor .bptable3 tbody tr td A { 	color:#9f4000;
+	text-decoration:none;}
+
+#bp-editor .bptable3 tbody tr td A:hover { 
+   	color:#9f4000;
+	text-decoration:none;
+	font-weight:bold;
+        
+}
+
+.bptable3 {
+		border-collapse:collapse;
+		border:2px solid #cccccc;
+}
+
+.f4gray {/* background-color: #F4F4F4;*/ }
+
+.bptable3 input[type=text] {
+        background:none;
+        background-color:#f1f1f1;
+        border:1px solid #cccccc
+}
+
+#bp-editor, #bp-editor * { font-size: 8pt; }
+#bp-editor INPUT { margin: 0; padding: 1px; }
+#bp-editor FORM { margin: 0; }
+#bp-editor A, #bp-editor A:link, #bp-editor A:visited { color: #ffffff; }
+#bp-editor .horiznav { background-color: #DCDCDC; }
+#bp-editor .footer { background-color: #FFFFFF; }
+#bp-editor .title { text-transform: uppercase; background-color: #9f4000; color: #FFFFFF; height: 2em; font-weight: bold;border-bottom:1px solid #cccccc; }
+#bp-editor .tab-spacer { padding: 2px; font-size: 1px; }
+#bp-editor .angle-left, #bp-editor .angle-right { width: 8px; }
+#bp-editor .bp-main { background-color: #DCDCDC; }
+#bp-editor .mod_tijelo { width: 170px; padding: 5px; }
+#bp-editor .bptable3 TH { 	text-align:left;
+	font-size:11px;
+	font-weight:bold;
+	background-color: #efefef;
+	border:1px solid #cccccc;
+	padding-left:4px; }
+#bp-editor .view-my-page A, #bp-editor .view-my-page A:link, #bp-editor .view-my-page A:visited { color: #000000; display: block; float: right; clear: none; text-transform: none; font-style: italic; font-weight: normal; }
+#bp-editor .bp-main-search { border-style: solid; border-width: 1px; border-color: #C0C0C0; color: #000000; background-color: #E0E0E0; }
+#bp-editor .bp-main-search TH, #bp-editor .bp-main-search TD { border-style: none; }
+#bp-editor .bp-search-advanced TH { text-align: left; width: 20%; white-space: nowrap; }
+#bp-editor .bp-search-advanced .semi { width: 1%; }
+#bp-editor .bp-search-advanced INPUT.form, #bp-editor .bp-search-advanced SELECT.form { display: block; width: 98%; }
+
+/************************ djelatnici razredi ucenici forum *****************************/
+
+
+.list,
+.list * {
+	box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+}
+
+.list .button_dark,
+.list .button_dark_green,
+.list .button_dark_red {
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.list .button_dark_green {
+	color: #FFFFFF;
+	background-color: #006400;
+	border-style: solid;
+	border-width: 1px;
+	border-right-color: #004000;
+	border-top-color: #008000;
+	border-left-color: #008000;
+	border-bottom-color: #004000;
+}
+
+.list .button_dark_red {
+	color: #FFFFFF;
+	background-color: #B22222;
+	border-style: solid;
+	border-width: 1px;
+	border-right-color: #8B0000;
+	border-top-color: #FA8072;
+	border-left-color: #FA8072;
+	border-bottom-color: #8B0000;
+}
+
+.list .button_dark {
+	color: #FFFFFF;
+	background-color: #003366;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-color: #000000;
+	border-left-color: #3399FF;
+	border-right-color: #000000;
+	border-top-color: #3399FF;
+}
+
+.list .input SELECT,
+.list .input TEXTAREA,
+.list .input INPUT.w {
+	display: block;
+	width: 100%;
+}
+
+.list LABEL {
+	cursor: pointer;
+}
+
+/*
+.list,
+.list TH,
+.list TD {
+	border-style: solid;
+	border-color: #EFEFEF;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+*/
+
+.list {
+	background-color: #FFFFFF;
+	color: #000000;
+	display:inline-table;
+}
+
+.list TH {
+	background-color: #FFFFFF;
+	color: #10599C;
+	font-weight: bold;
+	text-align: left;
+}
+
+.list TD {
+	/* background-color: #FFFFFF; */
+	color: #000000;
+}
+
+.list .reply {
+	/* color: #B22222; */
+}
+
+.list TD.reply,
+.list TD.reply TD {
+	/* background-color: #FFFFFF; */
+}
+
+.list BLOCKQUOTE,
+.list .indent {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-left: 1em;
+}
+
+.list .disabled {
+	color: #C0C0C0;
+}
+
+.list .error {
+	font-weight: bold;
+	color: #FF0000;
+	padding-left: 0.5em;
+}
+
+.list .ftitle {
+	padding: 3px;
+	background-color: #EFEFEF;
+}
+
+.list .ftitle2 {
+	padding: 3px;
+	background-color: #FFFFFF;
+}
+
+.list A,
+.list A:link,
+.list A:visited {
+	color: #000000;
+}
+
+.list .info,
+.list .info A,
+.list .info A:visited,
+.list .post A,
+.list .post A:visited,
+.list .ftitle A,
+.list .ftitle A:visited {
+	color: #093B6D;
+}
+
+.list FORM {
+	display: inline;
+}
+
+.list .crnezagrade {
+	color: #000000;
+}
+
+.list .infocell {
+	/* background-color: #FFFFFF; */
+}
+
+.list .msg-controls {
+	line-height: 2em;
+}
+
+.list .control,
+.list .control:link,
+.list .control:visited,
+.list .control2,
+.list .control2:link,
+.list .control2:visited {
+	color: #FFFFFF !important;
+	background-color: #14589E;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	font-weight: normal;
+}
+
+.list .control,
+.list .control:link,
+.list .control:visited {
+	background-color: #093B6D;
+}
+
+.list .control,
+.list .control:link,
+.list .control:visited,
+.list .control:hover,
+.list .control2,
+.list .control2:link,
+.list .control2:visited,
+.list .control2:hover {
+	text-decoration: none;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+	padding-right: 3px;
+	border-bottom: #001022 1px solid;
+	border-left: #0080D0 1px solid;
+	border-right: #001022 1px solid;
+	border-top: #0080D0 1px solid;
+}
+
+.list .control:active,
+.list .control2:active {
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	border-top: #003366 1px solid;
+	border-right: #093B6D 1px solid;
+	border-left: #003366 1px solid;
+	border-bottom: #093B6D 1px solid;
+}
+
+.list .control2,
+.list .control2:link,
+.list .control2:visited,
+.list .control2:hover,
+.list .control2:active {
+	background-color: #14589E;
+}
+
+.list .control2,
+.list .control2:link,
+.list .control2:visited,
+.list .control2:hover {
+	border-bottom: #003366 1px solid;
+	border-left: #0099FF 1px solid;
+	border-right: #003366 1px solid;
+	border-top: #0099FF 1px solid;
+}
+
+.list .control2:active {
+	border-top: #003366 1px solid;
+	border-right: #14589E 1px solid;
+	border-left: #003366 1px solid;
+	border-bottom: #14589E 1px solid;
+}
+
+.list .loading {
+	display: block;
+	float: right;
+	clear: none;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #B1D6FB;
+	color: #003366;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: blink;
+	padding: 1px;
+	padding-left: 1em;
+	padding-right: 1em;
+	position: relative;
+	bottom: 1px;
+	right: 1px;
+	margin: 1px;
+	white-space: nowrap;
+	-moz-border-radius: 0.4em;
+}
+
+.list2 .loading {
+	margin-top: -1em;
+}
+
+.list .new {
+	color: #B22222;
+}
+
+.list .nonew {
+	color: #A0A0A0;
+	font-style: italic;
+}
+
+.list .moderated,
+.list .moderated:link,
+.list .moderated:visited {
+	color: #800000;
+}
+
+.list .sticky,
+.list .sticky:link,
+.list .sticky:visited {
+	font-style: italic;
+}
+
+.list .msgstatus {
+	white-space: nowrap;
+	margin-left: 1em;
+}
+
+.list #f-cmds {
+	padding: 5px;
+	text-align: right;
+}
+
+.list .topic-title,
+.list .topic-title TH,
+.list .topic-title TD {
+	padding: 0;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.list .topic-title TH.button,
+.list .topic-title TD.button {
+	padding-right: 1px;
+}
+
+.list .topic-title TH.button A,
+.list .topic-title TH.button A:link,
+.list .topic-title TH.button A:visited,
+.list .topic-title TD.button A,
+.list .topic-title TD.button A:link,
+.list .topic-title TD.button A:visited {
+	display: block;
+	white-space: nowrap;
+	font-size: 8pt;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.list .rating TABLE,
+.list .rating TH,
+.list .rating TD,
+.list .topic,
+.list .topic TH,
+.list .topic TD {
+	border-style: none;
+}
+
+.list .rating TABLE,
+.list .rating TR,
+.list .rating TH,
+.list .rating TD,
+.list .msgrate TABLE,
+.list .msgrate TR,
+.list .msgrate TH,
+.list .msgrate TD {
+	background-color: #FFFFFF;
+}
+
+.list .topic TH,
+.list .topic TD {
+	padding: 1px;
+	background-color: #EFEFEF;
+}
+
+.list .newtopic-title {
+	white-space: nowrap;
+	padding-right: 0.5em !important;
+}
+
+.list .theader TABLE,
+.list .theader TABLE TH,
+.list .theader TABLE TD,
+.list .post TH,
+.list .post TD {
+	border-style: none;
+}
+
+.list .theader {
+	padding: 2px;
+}
+
+.list .post {
+	/* background-color: #FFFFFF; */
+	color: #000000;
+	padding: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #EFEFEF;
+	margin: 2px;
+}
+.list .post:hover {
+	background-color:#eeeeee;
+}
+.list .post .checkbox {
+	margin: 0;
+	padding: 0;
+}
+
+.list2,
+.list2 TH,
+.list2 TD {
+	border-style: none;
+}
+
+.list .link-disabled,
+.list .link-disabled:link,
+.list .link-disabled:visited,
+.list .link-disabled:hover,
+.list .link-disabled:active {
+	color: #A0A0A0 !important;
+	background-color: #E0E0E0 !important;
+	border-style: solid !important;
+	border-color: #C0C0C0 !important;
+	padding-top: 1px !important;
+	padding-bottom: 1px !important;
+	padding-left: 4px !important;
+	padding-right: 3px !important;
+}
+
+.list .msgrate {
+	float: right;
+	clear: right;
+	margin-top: -2em;
+}
+
+.list .redit,
+.list .reply {
+	clear: both;
+}
+
+.list .topictitle {
+	white-space: normal !important;
+}
+
+.list .unpublished {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFD0D0;
+	background-color: #FFF0F0;
+}
+
+.list .form-topic TABLE.input {
+	border-style: solid;
+	border-color: #C0C0C0;
+	border-width: 1px;
+	padding: 2px;
+	background-color: #F0F0F0;
+	margin: 1px;
+	margin-bottom: 3px;
+}
+
+#f-cmds {
+	padding: 4px !important;
+}
+
+.list {
+	border-collapse: separate;
+	border-spacing: 4px;
+}
+
+.list TABLE {
+	border-spacing: 0;
+}
+
+.list .subject {
+	background-color: #EFEFEF;
+	color: #000000;
+	/* white-space: nowrap; */
+	padding: 1px !important;
+	padding-left: 3px !important;
+	border-style: none;
+}
+
+.list .thread {
+	border-style: solid;
+	border-color: #EFEFEF;
+	border-width: 1px;
+}
+
+.list .thread-open {
+	border-color: #D0D0D0;
+}
+
+.list .thread-open .subject {
+	background-color: #D0D0D0;
+}
+
+.publish-cmds {
+	font-style: italic;
+}
+
+.no-threads {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.mod-djelatnici-div{
+	padding-left: 50px;
+	float:left;
+	line-height: 140%;
+	font-size: 10pt;
+}
+
+.mod-djelatnici-spajalica{
+	background-image:url(images/icons/paperclip.gif);
+	background-repeat:no-repeat;
+	background-position: right;
+	padding:0px 0px 0px 20px;
+	
+}
+
+.mod-djelatnici-stranica{
+	background-image:url(images/icons/teacherhat.gif);
+	background-repeat:no-repeat;
+	background-position: right;
+	padding:0px 0px 2px 20px;
+	margin-right:4px;
+}
+
+.mod-djelatnici-div a:hover{
+	text-decoration: underline;
+}
+
+p{
+	font-size: 10pt;	
+}
+.mod-razredi-td{
+	padding-left: 20px;
+	line-height: 140%;
+	font-size: 10pt;
+}
+
+.mod-razredi-a{
+	color: #999999;
+	text-decoration: none;
+}
+
+.mod-razredi-a:hover{
+	text-decoration: underline;
+}
+
+.mod-razredi-raspored{
+	background-image:url(images/icons/calendar.gif);
+	background-repeat:no-repeat;
+	background-position: right;
+	padding:0px 16px 0px 0px;
+	text-decoration: none;
+
+}
+
+.mod-razredi-raspored a:hover{
+	text-decoration: none;
+}
+
+.mod-ucenici-div{
+	padding-left: 50px;
+	float:left;
+	line-height: 140%;
+	font-size: 10pt;
+}
+
+.mod-ucenici-div a{
+	background-image:url(images/icons/paperclip.gif);
+	background-repeat:no-repeat;
+	background-position: right;
+	padding:0px 0px 0px 20px;
+	text-decoration:none;
+	
+}
+
+.mod-ucenici-div a:hover{
+	text-decoration: underline;
+}
+
+/***************************** NAVIGACIJA ***********************/
+
+.navigation {width: 175px;}
+.navigation div.nivo1,
+.navigation div.nivo2,
+.navigation div.nivo3 {
+	position: relative; left: 0px; top: 0px; /*'anchor' za ispravno pozicioniranje strelica*/
+	padding-top:3px;
+	padding-bottom:3px;
+	margin-bottom:1px;
+	border-left:4px solid #9f4000;
+}
+
+.navigation div a{
+	display: block;
+	color: #000000;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration:none;
+	width:155px;
+}
+
+.navigation div.nivo1 {background-color: #eecc97;}
+.navigation div.nivo2 {background-color: #f8e5c6;}
+.navigation div.nivo3 {background-color: #f8e5c6;}
+
+.navigation div.nivo1.selected, .navigation div.nivo1:hover {background-color: #e9d9c1;}
+.navigation div.nivo2.selected, .navigation div.nivo2:hover {background-color: #f0f0f0; border-right:3px solid #9f4000;}
+.navigation div.nivo3.selected, .navigation div.nivo3:hover {background-color: #ffffff; border-right:3px solid #9f4000;}
+
+.navigation div.nivo1 a {padding-left:5px; }									
+.navigation div.nivo2 a {padding-left:10px; width:140px;}
+.navigation div.nivo3 a {padding-left:15px; font-weight: normal; width:150px;}
+
+.navigation span.nav {position: absolute; top: 7px; left: 162px; cursor: pointer; background-image:url(images/icon_nav_close.gif); background-repeat:no-repeat; width:5px; height:5px;}
+.navigation span.nav.open {background-image:url(images/icon_nav_open.gif);}
+
+/****************************************************************/
+
+.plugin_acl_link a{
+	background-image:url(images/icons/permissions.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	padding-left:20px;
+	line-height:20px;
+	padding-bottom:2px;
+}
+
+
+em {
+	overflow: visible;
+	zoom:1;
+}
+
+div#news_archive {font-size:12px;}
+
+/******* FOTOGALERIJA ******/
+
+div.album {font-size:11px;text-align:left;}
+div.album h2 {font-weight:bold;font-size:15px;}
+div.album a.new {text-decoration:none;}
+div.album a.new img {margin-right:5px;}
+div.album a {
+	color:#ED9210;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+}
+div.album div.header {font-weight:bold;border-bottom:2px solid #9F4000; margin-bottom:7px;}
+
+div.album-col1,
+div.album-col2,
+div.album-col3,
+div.album-col4 {
+	float:left;
+}
+
+div.album .img_div{
+	border:1px solid #000000;
+	text-align:center;
+	background-color:#ffffff;
+	width:150px;
+	float:left;
+	margin:5px;
+	padding:5px;
+}
+
+/******** CHANGEDESIGN *******/
+.mod_opensite_highlightit {margin-bottom: 1em;}
+
+.mod_opensite_highlightit IMG {
+	border-width: 4px;
+	border-style: solid;
+}
+
+.mod_opensite_highlightit A IMG,
+.mod_opensite_highlightit A:link IMG,
+.mod_opensite_highlightit A:visited IMG {
+	border-color: #FFFFFF;
+}
+
+.mod_opensite_highlightit A:hover IMG,
+.mod_opensite_highlightit .hilite IMG {border-color: #9F4000;}
+.mod_opensite_highlightit .selected IMG {border-color: #9F4000 !important;}
+.mod_opensite_highlightit IMG.current {border-color: #c0c0c0 !important;}
+
+
+/*** toolbar za gumbe ***/
+div.toolbar {
+	padding:5px;
+	background-color:#eeeeee;
+	margin-bottom:20px;
+	line-height:20px;
+	height:20px;
+	text-align:left;
+}
+
+div.toolbar img {vertical-align:middle;}
+div.toolbar a {
+	text-decoration:none;
+	font-weight:bold;
+}
+
+/***** Newsviewer *****/
+.rss-btn-take {
+float: right;
+}
+.rss-btn-all-news{
+font-weight: bold;
+}
+.news-lead a:link, .news-lead a:visited{
+color: #9F4000;
+font-weight: bold;
+}
+div#index-news a.next {
+background:transparent url(images/icons/right1.gif) no-repeat scroll right center;
+color:#6C7880;
+display:block;
+float:right;
+text-decoration:none;
+width:60px;
+padding-right:10px;
+}
+div#index-news a.prev {
+background:transparent url(images/icons/left1.gif) no-repeat scroll left center;
+color:#6C7880;
+display:block;
+float:left;
+text-decoration:none;
+width:60px;
+padding-left:15px;
+}
+
+/***** End Newsviewer ****/
+
+span.login-action a {font-size:10px;font-weight:bold;}
+
+div.b_header {
+	min-height: 30px;
+}
+div.b_header p {margin:0}
+
+a.skipper {
+	left:-9999px;
+	position:absolute;
+	top:0;
+}

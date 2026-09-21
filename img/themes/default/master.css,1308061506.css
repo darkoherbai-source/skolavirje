@@ -1,0 +1,935 @@
+.gumb {font-weight:bold}
+
+.admin-ug-form .admin-header {
+	background-color:#f0f0f0;
+	text-align:center;
+	font-weight:bold;
+	height:19px;
+	line-height:19px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.admin-left-col, .admin-ug-form label {
+	float:left;
+	width:35%;
+	text-align:right;
+	padding-right:8px;
+}
+
+.groups .admin-left-col, .groups label {
+	width:10%;
+}
+
+.admin-ug-form label.grp {
+	width:45%;
+	text-align:center;
+	padding:0px;
+}
+
+.admin-ug-form div.spacer {
+	margin-top:5px;
+}
+
+
+
+fieldset {
+	border:0
+}
+img {
+	border:none;
+}
+
+.search_box{
+	BORDER-RIGHT: #14589E 1px solid;
+	BORDER-TOP: #14589E 1px solid;
+	BORDER-LEFT: #14589E 1px solid;
+	BORDER-BOTTOM: #14589E 1px solid;
+	BACKGROUND-COLOR: #FFFFFF;
+	FONT-SIZE: 11px;
+	FONT-FAMILY:verdana,arial
+}
+.search_gray {
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-TOP: #999999 1px solid;
+	FONT-SIZE: 11px;
+	BORDER-LEFT: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid;
+	FONT-FAMILY: verdana,arial;
+	BACKGROUND-COLOR: #ffffff
+}
+.drop_down{
+	BACKGROUND-COLOR: #FFFFFF;
+	FONT-SIZE: 11px;
+	FONT-FAMILY:verdana,arial
+}
+.menu {
+	COLOR: #FFFFFF;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none
+}
+.menu A {
+	COLOR: #FFFFFF;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none
+}
+.menu A:hover {
+	COLOR: #FFFFFF;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none
+}
+.menu_left {
+	COLOR: #093B6D;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none
+}
+.menu_left:hover {
+	COLOR: #000000;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:underline;
+}
+.link {
+	FONT-SIZE: 11px;
+	COLOR: #990066;
+	TEXT-DECORATION: none
+}
+.gray {
+	COLOR: #cccccc
+}
+.body {
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 15px;
+}
+.title {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	background-color: #14589E;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+.title:hover {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #cccccc;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+.title_dark {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	background-color: #093B6D;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+.title_dark:hover {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #cccccc;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+.red_title {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #ffffff;
+	FONT-FAMILY: tahoma, verdana,arial;
+	BACKGROUND-COLOR: #b22222
+}
+.green_title {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #ffffff;
+	FONT-FAMILY: tahoma, verdana,arial;
+	BACKGROUND-COLOR: #006400
+}
+.link_white {
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none
+}
+.search {
+	FONT-SIZE: 11px;
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+	background-color: #D3E4F5;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+.title_middle {
+	FONT-SIZE: 11px;
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.title_middle:visited {
+	FONT-SIZE: 11px;
+	COLOR: #404040;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.title_middle:hover {
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	TEXT-DECORATION: underline;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.small {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: verdana
+}
+.menu_right {
+	COLOR: #14589E;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:none
+}
+.menu_right:hover {
+	COLOR: #14589E;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION:underline
+}
+.menu_right_red {
+	FONT-SIZE: 11px;
+	COLOR: #b22222;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+.menu_right_red:hover {
+	FONT-SIZE: 11px;
+	COLOR: #b22222;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: underline
+}
+.menu_right_green {
+	FONT-SIZE: 11px;
+	COLOR: #006400;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none
+}
+.menu_right_green:hover {
+	FONT-SIZE: 11px;
+	COLOR: #006400;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: underline
+}
+.title2_black {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #990066
+}
+.small-white {
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: verdana
+}
+.title_middle_dark {
+	FONT-SIZE: 11px;
+	COLOR: #003366;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.footer {
+	FONT-SIZE: 10px;
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial
+}
+.footer:hover {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	TEXT-DECORATION: underline;
+	FONT-FAMILY: verdana, tahoma, arial
+}
+A{
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+}
+A:hover{
+	COLOR: #14589E;
+	TEXT-DECORATION: underline;
+}
+.link_gray {
+	COLOR: #D6D6D6
+}
+.content_title {
+	FONT-SIZE: 12px;
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.content_title:hover {
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	TEXT-DECORATION: underline;
+	FONT-FAMILY: verdana, tahoma, arial;
+	FONT-WEIGHT: bold
+}
+.menu_dark {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	background-color: #093B6D;
+	FONT-FAMILY: tahoma, verdana, arial
+}
+/* .input {
+	BORDER-BOTTOM: black 1px solid;
+	BORDER-LEFT: black 1px solid;
+	BORDER-RIGHT: black 1px solid;
+	BORDER-TOP: black 1px solid;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px} */
+.button2 {
+	BORDER-BOTTOM: #003366 1px solid;
+	BORDER-LEFT: #0099FF 1px solid;
+	BORDER-RIGHT: #003366 1px solid;
+	BORDER-TOP: #0099FF 1px solid;
+	FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	background-color: #14589E;
+	color: #FFFFFF;
+	text-transform:uppercase;
+}
+.button_dark {
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-LEFT: #3399FF 1px solid;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-TOP: #3399FF 1px solid;
+	FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	background-color: #003366;
+	color: #FFFFFF;
+	text-transform:uppercase;
+}
+.button_dark_red {
+	BORDER-RIGHT: #8B0000 1px solid;
+	BORDER-TOP: #FA8072 1px solid;
+	FONT-SIZE: 11px;
+	TEXT-TRANSFORM: uppercase;
+	BORDER-LEFT: #FA8072 1px solid;
+	COLOR: #ffffff;
+	BORDER-BOTTOM: #8B0000 1px solid;
+	FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #b22222;
+	padding:1px;
+	padding-left:6px;
+	padding-right:6px;
+}
+a.button_dark_red:hover {
+	color:#ffffff;
+	text-decoration:none;
+}
+.button_dark_green {
+	BORDER-RIGHT: #004000 1px solid;
+	BORDER-TOP: #008000 1px solid;
+	FONT-SIZE: 11px;
+	TEXT-TRANSFORM: uppercase;
+	BORDER-LEFT: #008000 1px solid;
+	COLOR: #ffffff;
+	BORDER-BOTTOM: #004000 1px solid;
+	FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #006400
+}
+ul, ol, li {
+	padding-top: 0;
+	margin-top: 0;
+}
+body, input, select, textarea {
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+table {
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+p {
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 15px;
+}
+h5 {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 13px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.nav_entry {
+	display: block;
+	width: 100%;
+	padding: 3px;
+}
+.arrow {
+	float: right;
+	display: block;
+	padding: 2px;
+}
+
+.path {
+	FONT-SIZE: 11px;
+	COLOR: #14589E;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, tahoma, arial
+}
+.path:hover {
+	FONT-SIZE: 11px;
+	COLOR: #14589E;
+	TEXT-DECORATION: underline;
+	FONT-FAMILY: verdana, tahoma, arial
+}
+
+.bptabs {
+	background-color: #14589E;
+	color: #FFFFFF;
+}
+.bpdark {
+	background-color: #14589E !important;
+	color: #FFFFFF;
+}
+.bptabs TD, .bptabs TH {
+	white-space: nowrap;
+}
+.bptabs, .bptabs A, .bptabs A:link, .bptabs A:visited {
+	background-color: #B1D6FB;
+	color: #000000;
+	text-decoration: none;
+}
+.bptabs A {
+	padding: 0;
+}
+.bptabs .active, .bptabs .active A, .bptabs .active A:visited {
+	background-color: #F4F4F4;
+	color: #000000;
+	font-weight: normal;
+}
+.bptabs .disabled {
+	background-color: #E0E0E0;
+	color: #A0A0A0;
+}
+.bptable, .bptable DIV, .bptable TD, .bptable IMG {
+	background-color: #F4F4F4;
+}
+.bptable TH {
+	background-color: #D0D0D0;
+}
+.bptitle TD, .bptitle TH {
+	color: #FFFFFF;
+	background-color: #14589E;
+}
+.bptitle H2 {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+	padding: 0.2em;
+	margin: 0;
+}
+.bptable2 TH {
+	white-space: nowrap;
+}
+.bptable2 TD {
+	text-align: left;
+	vertical-align: top;
+}
+.bptable2 TD.hi, .bptable2 .hi TD, .bptable2 .hi A, .bptable2 .hi A:visited {
+	color: #14589E;
+	background-color: #FFFFFF;
+}
+.bptable3 TD.hi, .bptable3 .hi TD, .bptable3 .hi A, .bptable3 .hi A:visited {
+	color: #14589E;
+	background-color: #FFFFFF;
+}
+.bptable3, .bptable3 TH, .bptable3 TD {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E7DFDE;
+}
+.bptable3 TD {
+	background-color: #FFFFFF;
+}
+.bptable3 TH {
+	background-color: #D6EBFF;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+}
+.bptable3 TH.bpgray {
+	background-color: #E7DFDE;
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+}
+.bptable3 TD {
+	text-align: left;
+	vertical-align: top;
+}
+.bpnodata {
+	display: block;
+	font-style: italic;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 2em;
+}
+.lightblue {
+	display: block;
+	width: 100%;
+	background-color: #B1D6FB;
+	padding: 2px;
+}
+.bpsubtitle {
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	color: #000000;
+	padding: 1em;
+	padding-right: 0;
+}
+.bptline, .bptline IMG {
+	background-color: #E7DFDE !important;
+	border-style: none !important;
+	padding: 0 !important;
+}
+.bpdark .acl-link, .bpdark .acl-link A, .bpdark .acl-link A:link, .bpdark .acl-link A:visited {
+	background-color: transparent !important;
+	color: #FFFFFF;
+}
+.bpdark .acl-link A:hover {
+	text-decoration: underline;
+}
+
+.bpcontrol {
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	border-width: 1px;
+	cursor: pointer;
+}
+/* .bpmaintable, .bptable TH, .bptable TD {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+} */
+.bpmaintable, .bpmaintable TH, .bpmaintable TD {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+}
+.bptable TH, .bptable TD {
+	border-style: none;
+}
+
+.bpred, .bpred:link, .bpred:visited {
+	color: #14589E;
+	text-decoration: none;
+}
+.bpred:hover {
+	text-decoration: underline;
+	color: #14589E;
+}
+.bpred:active {
+	text-decoration: none;
+}
+A.bpred {
+	text-transform: uppercase;
+}
+.bpmtitle {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #14589E;
+}
+.bpdisabled {
+	font-size: 24pt;
+	font-weight: bold;
+	color: #E00000;
+}
+.bpframed {
+	background-color: #F0F0F0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #C0C0C0;
+}
+
+.paging TH, .paging TD {
+	color: #000000;
+	background-color: #EEEEEE;
+}
+
+
+/**** KALENDAR ****/
+ td.mod_tijelo_kalendar_danas {
+	background-color:#B8C9DB;
+	border:1px solid #002F50;
+}
+td.mod_tijelo_kalendar_dogadanje, .mod_tijelo_kalendar_dogadanje {
+	background-color:#DDE5EE;
+}
+
+
+
+/***** veliki kalendar header - gumbi (dnevni,tjedni,mjesecni) i title ****/
+/**************************************************************************/
+div#kalendar-header {
+	font-size:14px;
+	margin-right:7px;
+	margin-top:20px;
+}
+
+div#kalendar-header .title{
+	font-size:16px;
+	background:none;
+	color:#000000;
+}
+
+div#kalendar-header .buttons {
+	width:250px;
+}
+
+div#kalendar-header .btn {
+	border-left:1px solid #ffffff;
+	border-top:1px solid #ffffff;
+	border-right:1px solid #9f9f9f;
+	border-bottom:1px solid #9f9f9f;
+	background-color:#14589E;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+	text-align:center;
+	font-size:12px;
+	color:#ffffff;
+	width:60px;
+	float:right;
+	margin:1px;
+}
+
+div#kalendar-header .btn:hover {
+	background-color:#5c5d9c;
+}
+div#kalendar-header .btn a{
+	font-size:12px;
+	color:#ffffff;
+	text-decoration:none;
+	padding-top:5px;
+	font-weight:normal;
+}
+
+
+/**** kalendar veliki - mjesecni prikaz ****/
+
+table.cal-month {
+	background-color:#f4f4f4;
+}
+
+table.cal-month tr.weekday, table.cal-month.m-small tr.monthTitle {
+	background-color:#D3E4F5;
+	font-weight:bold;
+	font-size:11px;
+	text-align:center;
+}
+
+table.cal-month tr.weekday td {
+	width:14%;
+	height:22px;
+	color:#003366;
+}
+
+table.cal-month tr.days {
+	background-color:#ffffff;
+	font-size:11px;
+}
+
+table.cal-month.m-small tr.days {
+	height:20px;
+	text-align:center;
+}
+
+/*** END KALENDAR ***/
+
+
+.sortable * {
+	box-sizing:		border-box;
+	-moz-box-sizing:	border-box;
+}
+
+.sortable {
+	font:		Icon;
+	border:		0px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+	width:		100%;
+}
+
+.sortable th {
+	border:	 0px Solid ThreeDShadow;
+}
+
+.sortheader {
+	background:     ButtonFace;
+	border-top:	1px solid;
+	border-right:	1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-color:   ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+	cursor:		default;
+	text-align:	left;
+	padding:	2px 5px 2px 5px;
+	display:	block;
+	color:	  WindowText;
+	white-space:	nowrap;
+	width:		100%;
+}
+
+.sortheader:active {
+	border-color:   ButtonShadow ButtonHighlight orange ButtonShadow;
+	padding:	3px 4px 1px 6px;
+	color:	  WindowText;
+}
+
+.sortheader:hover {
+	text-decoration:none;
+	color:	  WindowText;
+	background: ButtonHighlight;
+	border-bottom:1px orange solid;
+
+}
+
+.sortable td {
+	padding:	2px 5px;
+}
+
+
+.sort-arrow {
+	width:			11px;
+	height:			11px;
+	background-position:    center center;
+	background-repeat:	no-repeat;
+	margin:			0 2px;
+}
+
+.sort-arrow.descending {
+	background-image:	       url("http://os-fvsignjara-virje.skole.hr/img/themes/default/images/downsimple.png");
+}
+
+.sort-arrow.ascending {
+	background-image:	       url("http://os-fvsignjara-virje.skole.hr/img/themes/default/images/upsimple.png");
+}
+.folder_item {
+	padding-left:1000px;
+}
+
+.folder_items .fi-title {
+	padding-left:24px;
+	vertical-align:top;
+	background-position:4px 1px;
+}
+
+.fi-title a {
+	display:block;
+	width:100%;
+}
+.fi-title a:hover {
+}
+
+.fi-edit_time {
+	white-space:nowrap;
+}
+
+.sortable .folder_items .notapproved {
+	background-color:red !important;
+}
+
+.sortable .folder_items td {
+	vertical-align:top;
+}
+
+
+.folderpath a {
+	font-size:10px !important;
+}
+
+.folderpath {
+	padding:2px 3px 3px 3px;
+	text-align:left;
+}
+
+.selcols {
+	padding-left:10px;
+}
+
+.upload {
+	padding-top:20px;
+}
+
+
+
+#footbar {
+	width: 100%;
+	height: 12px;
+	background: #14589E;
+}
+
+#bnavbar {
+	text-align: center;
+}
+
+#bnavbar ul {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	width: 100%
+}
+
+#bnavbar li {
+	list-style-type: none;
+	display: inline;
+	border-right: 1px solid #000000;
+}
+
+#bnavbar li.lastelement {
+	border: none;
+}
+
+
+#bnavbar li a, #bnavbar li a:visited {
+	text-decoration: none;
+	color: #000000;
+	padding: 7px 15px 7px 15px;
+}
+
+#bnavbar li a:hover {
+	text-decoration: underline;
+}
+
+
+#copyright {
+	text-align: center;
+}
+
+
+#contentproviders ul {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	text-align: center;
+}
+
+#contentproviders li {
+	list-style-type: none;
+}
+
+#hnavbar ul {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	float: left;
+	background: #003366;
+	width: 100%
+}
+
+#hnavbar li {
+	list-style-type: none;
+	display: inline;
+}
+
+#hnavbar li a, #hnavbar li a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 7px 10px 7px 10px;
+	float: left;
+	border-right: 1px solid #FFFFFF;
+}
+
+#hnavbar li a:hover, #hnavbar #hnavbar-current a {
+	background: #FF8040;
+}
+
+/*************** MOD LINKS *****************/
+div.links-group {
+	background-color:#b1d6fb;
+	color:#003366;
+	font-weight:bold;
+}
+
+div.links-group div.group-name {
+	float:left;
+	width:90%;
+	margin-left:4px;
+}
+
+div.links-group div.group-switch {
+	float:right;
+	width:12px;
+	text-align:center;
+	line-height:15px;
+}
+
+div.links-group div.group-switch a{
+	text-align:center;
+	margin-top:3px;
+}
+div.links-list {margin-bottom:4px;}
+
+div.links-list a {
+	display:block;
+	padding:2px;
+	padding-left:12px;
+	margin-left:7px;
+	margin-top:1px;
+	background-image:url("images/arrow.gif");
+	background-repeat:no-repeat;
+	background-position:center left;
+}
+
+/**** navigacija ****/
+table.navigation1 {
+        background-color:#B1D6FB;
+}
+
+table.navigation1.selected, table.navigation1:hover {
+        background-color:#ffffff;
+}
+
+table.navigation1 td a {
+	color:#093B6D;
+	font-weight:bold;
+}
+
+table.navigation1 td a:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+
+table.navigation2 {
+        background-color:#D1E7FD;
+}
+
+table.navigation2.selected, table.navigation2:hover {
+        background-color:#ffffff;
+}
+table.navigation2.selected {
+	font-weight:bold;
+}
