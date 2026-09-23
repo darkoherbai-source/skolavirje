@@ -1,0 +1,1283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Osnovna škola prof. Franje Viktora Šignjara Virje - Naslovnica</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<link rel="alternate" type="application/rss+xml" title="" href="http://www.os-fvsignjara-virje.skole.hr/rss/rssfeeder.php?rss_kid=1&amp;rss_ct=news&amp;rss_uid=1" />
+
+		<script type="text/javascript">
+		//<![CDATA[
+		
+			var sigs = new Array(
+		{users_id:'1', name:'User Anonymous'},{users_id:'4', name:'Unknown '},{users_id:'5', name:'External '});
+
+			function setSigSelectOption(id) {
+				var so = document.getElementById(id);
+				for (var i=0; i<sigs.length; i++) {
+					if (so.options[i] == null) {
+						so.options[i] = new Option(sigs[i].name, sigs[i].users_id);
+					} else {
+						so.options[i].text = sigs[i].name;
+						so.options[i].value = sigs[i].users_id;
+					}
+				}
+			}
+
+			function delElement(node) {
+				node.parentNode.removeChild(node);
+			}
+
+			function delSig(signum, signame) {
+				var no = false;
+				eval('if (' + signame + '_sigcount == 1) { alert(\'Mora postojati barem jedan potpisnik!\'); no=true;}');
+				if (no) return;
+				eval(signame + '_sigcount--;');
+				delElement(document.getElementById(signame + '_sig_' + signum));
+				delElement(document.getElementById(signame + '_but_' + signum));
+				delElement(document.getElementById(signame + '_br_' + signum));
+			}
+
+			function addSig(name) {
+				var place = document.getElementById(name + '_place');
+				var count;
+				eval('count = parseInt('+name+'_allsigcount++);');
+				eval(name+'_sigcount++');
+				
+				var select = document.createElement('SELECT');
+				select.name = name +'[]';
+				select.id = name + '_sig_' + count;
+				place.appendChild(select);
+				setSigSelectOption(select.id);
+				
+				var button = document.createElement('INPUT');
+				button.type='button';
+				button.value='Ukloni';
+				button.id = name + '_but_' + count;
+				place.appendChild(button);
+
+				var br = document.createElement('BR');
+				br.id = name + '_br_' + count;
+				place.appendChild(br);
+
+				var delSigEventTextIE = 'button.attachEvent(\'onmousedown\', function() { var signum=' + count +'; var signame=\'' + name +'\'; delSig(signum,signame); });';
+				var delSigEventTextDOM = 'button.addEventListener(\'mousedown\', function() { var signum=' + count +'; var signame=\'' + name +'\'; delSig(signum,signame); }, false);';
+
+				if (button.addEventListener) {
+					eval(delSigEventTextDOM);
+				} else { //prokleti Microsoft! 
+					eval(delSigEventTextIE);
+				}
+				return select;
+			}
+
+			function getSigOptionIndexByUserId(user_id) {
+				for (i=0; i<sigs.length; i++) {
+					if (sigs[i].users_id == user_id) {
+						return i;
+					}
+				}
+				return -1;
+			}
+
+			function addSigSelected(name, user_id) {
+				var idx = getSigOptionIndexByUserId(user_id);
+				if (idx > -1) {
+					var sig = addSig(name);
+					sig.selectedIndex = idx;
+				}
+			}
+
+		//]]>
+		</script>
+		
+		<script type="text/javascript">
+		<!--
+	var news_authors_sigcount = 0; //broj potpisa
+var news_authors_allsigcount = 0; //broj stvorenih select-optiona
+
+		-->
+		</script>
+	<script type="text/javascript" src="inc/js/getselected.js"></script><script type="text/javascript" src="inc/js/urlencdec.js"></script><script type="text/javascript" src="inc/js/entityencdec.js"></script>
+<link rel="alternate" type="application/rss+xml" title="" href="http://www.os-fvsignjara-virje.skole.hr/rss/rssfeeder.php?rss_kid=5259&amp;rss_ct=news&amp;rss_uid=1" />
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://www.os-fvsignjara-virje.skole.hr/rss/rssfeeder.php?rss_kid=5276&amp;rss_ct=file&amp;rss_uid=1" />
+
+<style type="text/css">a.strix-popup{visibility:hidden}</style><script type="text/javascript" src="inc/js/mootools-core-1.4.5-full-nocompat-yc.js,1333452434"></script>
+<script type="text/javascript" src="inc/js/mootools-more-1.4.0.1.js,1359987538"></script>
+<script type="text/javascript" src="inc/js/mocha/mocha-core-window-modal-mt14.js,1364290017"></script>
+<script type="text/javascript" src="inc/js/cms-init1.3.js,1380792939"></script>
+<script type="text/javascript" src="inc/js/milkbox2.2-mt1.3patch.js,1308061533"></script>
+<script type="text/javascript" src="inc/js/roll_include.js,1333633930"></script>
+<script type="text/javascript" src="inc/js/datepicker/datepicker2.1.1-yui.js,1333633930"></script>
+<script type="text/javascript" src="inc/js/datepicker/Locale.hr-HR.DatePicker.js,1333633930"></script>
+<link rel="stylesheet" href="img/themes/default/strix4-default.css,1319551645.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/Window.css,1308061506.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/milkbox/milkbox.css,1308061506.css" type="text/css" />
+<link rel="stylesheet" href="inc/js/datepicker/datepicker_vista.css,1333633930.css" type="text/css" />
+
+	
+	<meta http-equiv="Content-Language" content="HR" />
+	<meta name="keywords" content="CMS, ďż˝kole, CARNet " />
+	<meta name="language" content="Hrvatski" />
+	<meta name="document-classification" content="Education" />
+	<meta name="document-type" content="Public" />
+	<meta name="document-rating" content="Safe for Kids" />
+	<meta name="document-distribution" content="Global" />
+	
+	<link rel="shortcut icon" type="image/ico" href="img/themes/default/images/favicon.ico" />
+	<link rel='stylesheet' href='img/themes/modern/3/master.css,1329395825.css' type='text/css' />
+
+<!--[if IE]>
+	<link rel='stylesheet' href='/img/themes/modern/3/ie7hack.css,1308061507' type='text/css' />
+<![endif]-->
+
+</head>
+
+<body onload="addSigSelected('news_authors',1);">
+	<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#glavni-stupac" class="skipper">preskoči na sadržaj</a>
+	<center>
+		<div id="okvir" class="clearfix floatholder">
+			<div id="okvir-sjena-gore"></div>
+			<div id="glavni">
+				<div id="horizontalni-linkovi">
+					<div id="naziv-skole">
+						<a href="index.html" class="site-link">Osnovna škola prof. Franje Viktora Šignjara Virje</a>
+					</div>
+					<div style="float:right;padding-right:5px;">
+												<a href="http://webmail.skole.hr/" class="horiz-link" title="Webmail">
+									Webmail
+				</a>
+					<a href="skola/knjiznica/index.html" class="horiz-link" title="Knjižnica">
+									Knjižnica
+				</a>
+					<a href="http://os-fvsignjara-virje.skole.hr/blue2?userid=-1" class="horiz-link" title="Spajalica">
+									Spajalica
+				</a>
+					<a href="http://lms.carnet.hr/" class="horiz-link" title="OnLine tečajevi">
+									OnLine tečajevi
+				</a>
+					<a href="forum.html" class="horiz-link" title="Forum">
+									Forum
+				</a>
+					<a href="skola/kontakti.html" class="horiz-link" title="Kontakti">
+									Kontakti
+				</a>
+			
+					</div>
+				</div>
+				<div class="banner_header">
+	<div class="b_header"  >
+							<p><img alt="" src="upload/os-fvsignjara-virje/images/headers/Image/skola04a.jpg" style="width: 763px; height: 220px;" /></p>
+
+			</div>
+
+	<div style="clear:both"></div>
+
+</div>
+				<div id="navbar">	::&nbsp;<a href="index.html">Naslovnica</a>
+::</div>
+
+				<div id="lijevi-stupac">
+					<div class="navigation">
+	<div class="nivo1 selected"><a href="index.html">Naslovnica</a><span id="kid-vnav_1" class="nav" onclick="InvertVisibility('vnav_1');UpdateRollPreferences('vnav_1');$('kid-vnav_1').toggleClass('open');return false;"></span></div>
+		<div id='vnav_1' style="display:block;">						<div class="nivo2"><a href="ra_unovodstvo.html">Računovodstvo</a></div>
+													<div class="nivo2"><a href="pristup_informacijama.html">Pristup informacijama</a></div>
+													<div class="nivo2"><a href="javna_nabava.html">Javna nabava</a></div>
+													<div class="nivo2"><a href="op_i_akti.html">Zakoni i Opći akti</a></div>
+													<div class="nivo2"><a href="akcijski_plan_i_antikorupcijski_program.html">Akcijski plan i antikorupcijski program</a></div>
+													<div class="nivo2"><a href="za_tita_osobnih_podataka.html">ZOP</a></div>
+													<div class="nivo2"><a href="svjedod_ba_duplikat.html">Svjedodžba - duplikat</a></div>
+												</div>		<div class="nivo1"><a href="skola.html">O školi</a><span id="kid-vnav_5254" class="nav open" onclick="InvertVisibility('vnav_5254');UpdateRollPreferences('vnav_5254');$('kid-vnav_5254').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5254' style="display:none;">						<div class="nivo2"><a href="skola/povijest.html">Povijest</a></div>
+													<div class="nivo2"><a href="skola/lokacija.html">Lokacija</a></div>
+													<div class="nivo2"><a href="skola/ploca.html">Oglasna ploča</a><span id="kid-vnav_5259" class="nav open" onclick="InvertVisibility('vnav_5259');UpdateRollPreferences('vnav_5259');$('kid-vnav_5259').toggleClass('open');return false;"></span></div>
+				<div id='vnav_5259' style="display:none;">					<div class="nivo3"><a href="skola/ploca/dokumenti.html">Dokumenti</a></div>
+									</div>									<div class="nivo2"><a href="skola/knjiznica.html">Knjižnica</a><span id="kid-vnav_5262" class="nav open" onclick="InvertVisibility('vnav_5262');UpdateRollPreferences('vnav_5262');$('kid-vnav_5262').toggleClass('open');return false;"></span></div>
+				<div id='vnav_5262' style="display:none;">					<div class="nivo3"><a href="skola/knjiznica/radno_vrijeme_knji_nice.html">Radno vrijeme knjižnice</a></div>
+					<div class="nivo3"><a href="skola/knjiznica/kurikulum_kolske_knji_nice.html">Kurikulum školske knjižnice</a></div>
+					<div class="nivo3"><a href="skola/knjiznica/vijesti_iz_knji_nice.html">Vijesti iz knjižnice</a></div>
+					<div class="nivo3"><a href="skola/knjiznica/e_katalog_i_korisni_linkovi.html">e-katalog i korisni linkovi</a></div>
+					<div class="nivo3"><a href="skola/knjiznica/lektira.html">Lektira</a></div>
+					<div class="nivo3"><a href="skola/knjiznica/digitalni_materijali.html">Digitalni materijali</a></div>
+									</div>									<div class="nivo2"><a href="skola/projekti.html">Projekti</a></div>
+													<div class="nivo2"><a href="skola/kontakti.html">Kontakti</a></div>
+													<div class="nivo2"><a href="skola/dokumenti.html">Dokumenti</a></div>
+													<div class="nivo2"><a href="djelatnici.html">Djelatnici</a></div>
+												</div>		<div class="nivo1"><a href="nastava.html">Nastava</a><span id="kid-vnav_5265" class="nav open" onclick="InvertVisibility('vnav_5265');UpdateRollPreferences('vnav_5265');$('kid-vnav_5265').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5265' style="display:none;">						<div class="nivo2"><a href="nastava/predmeti.html">Predmeti</a></div>
+													<div class="nivo2"><a href="nastava/natjecanja.html">Natjecanja</a></div>
+													<div class="nivo2"><a href="nastava/aktivnosti.html">Izvannastavne aktivnosti</a></div>
+													<div class="nivo2"><a href="nastava/kalendar.html">Kalendar</a></div>
+												</div>		<div class="nivo1"><a href="roditelji.html">Kutak za roditelje</a><span id="kid-vnav_5271" class="nav open" onclick="InvertVisibility('vnav_5271');UpdateRollPreferences('vnav_5271');$('kid-vnav_5271').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5271' style="display:none;">						<div class="nivo2"><a href="roditelji/informacije.html">Raspored informacija</a></div>
+													<div class="nivo2"><a href="roditelji/roditeljski.html">Roditeljski sastanci</a></div>
+													<div class="nivo2"><a href="roditelji/forum.html">Forum za roditelje</a></div>
+													<div class="nivo2"><a href="roditelji/upisi_u_prvi_razred.html">Upisi u prvi razred</a><span id="kid-vnav_5478" class="nav open" onclick="InvertVisibility('vnav_5478');UpdateRollPreferences('vnav_5478');$('kid-vnav_5478').toggleClass('open');return false;"></span></div>
+				<div id='vnav_5478' style="display:none;">					<div class="nivo3"><a href="roditelji/upisi_u_prvi_razred/upisi_u_srednju_kolu.html">Upisi u srednju školu</a></div>
+					<div class="nivo3"><a href="roditelji/upisi_u_prvi_razred/upisi_u_1_razred_osnovne_kole.html">Upisi u 1. razred osnovne škole</a></div>
+									</div>									<div class="nivo2"><a href="roditelji/pedago_ki_kutak_za_roditelje.html">Pedagoški kutak za roditelje</a></div>
+												</div>		<div class="nivo1"><a href="razmjena.html">Razmjena znanja</a><span id="kid-vnav_5296" class="nav open" onclick="InvertVisibility('vnav_5296');UpdateRollPreferences('vnav_5296');$('kid-vnav_5296').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5296' style="display:none;">						<div class="nivo2"><a href="dokumenti.html">Dokumenti</a></div>
+													<div class="nivo2"><a href="rjecnik.html">Rječnik</a></div>
+													<div class="nivo2"><a href="forum.html">Forum</a></div>
+												</div>		<div class="nivo1"><a href="preferences.html">Korisničke postavke</a></div>
+				<div class="nivo1"><a href="fotogalerija.html">Foto-galerija</a></div>
+				<div class="nivo1"><a href="pododje.html">Područni odjeli</a><span id="kid-vnav_5449" class="nav open" onclick="InvertVisibility('vnav_5449');UpdateRollPreferences('vnav_5449');$('kid-vnav_5449').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5449' style="display:none;">						<div class="nivo2"><a href="pododje/miholjanec.html">Miholjanec</a></div>
+													<div class="nivo2"><a href="pododje/semovci.html">Šemovci</a></div>
+													<div class="nivo2"><a href="pododje/hampovica.html">Hampovica</a></div>
+												</div>		<div class="nivo1"><a href="natjecaji.html">Natječaji</a></div>
+				<div class="nivo1"><a href="tijela_upravljanja.html">Vijeća i odbori</a><span id="kid-vnav_5488" class="nav open" onclick="InvertVisibility('vnav_5488');UpdateRollPreferences('vnav_5488');$('kid-vnav_5488').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5488' style="display:none;">						<div class="nivo2"><a href="tijela_upravljanja/_kolski_odbor.html">Školski odbor</a><span id="kid-vnav_5489" class="nav open" onclick="InvertVisibility('vnav_5489');UpdateRollPreferences('vnav_5489');$('kid-vnav_5489').toggleClass('open');return false;"></span></div>
+				<div id='vnav_5489' style="display:none;">					<div class="nivo3"><a href="tijela_upravljanja/_kolski_odbor/dokumentacija.html">Dokumentacija</a></div>
+									</div>									<div class="nivo2"><a href="tijela_upravljanja/vije_e_roditelja.html">Vijeće roditelja</a></div>
+													<div class="nivo2"><a href="tijela_upravljanja/vije_e_u_enika.html">Vijeće učenika</a></div>
+												</div>		<div class="nivo1"><a href="izleti_i_ekskurzije.html">Izleti i ekskurzije</a><span id="kid-vnav_5497" class="nav open" onclick="InvertVisibility('vnav_5497');UpdateRollPreferences('vnav_5497');$('kid-vnav_5497').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5497' style="display:none;">						<div class="nivo2"><a href="izleti_i_ekskurzije/ponude.html">Ponude</a></div>
+												</div>		<div class="nivo1"><a href="_kolska_kuhinja.html">Školska kuhinja</a><span id="kid-vnav_5499" class="nav open" onclick="InvertVisibility('vnav_5499');UpdateRollPreferences('vnav_5499');$('kid-vnav_5499').toggleClass('open');return false;"></span></div>
+		<div id='vnav_5499' style="display:none;">						<div class="nivo2"><a href="_kolska_kuhinja/jelovnik_po_mjesecima.html">Jelovnik</a></div>
+												</div>		<div class="nivo1"><a href="mediji_o_nama.html">Mediji o nama</a></div>
+			</div>
+										
+					<br />
+					<div align="right" style="float:right;">
+					<div class="mod-lijevo-head"><div class="mod-head-in">Login</div></div>
+					<div class="mod-lijevo-body"><div class="mod-body-in">	<form name="login" id="login" method="post" action="https://login5.skole.hr/login.php">
+	<input type="hidden" name="proto" value="http" />
+	<input type="hidden" name="origin" value="https://os-fvsignjara-virje.skole.hr" />
+	<input type="hidden" name="redirect" value="/" />
+	Korisnik: <input type="text" id="loginname" class="input-text" name="loginname" /><br />
+	Lozinka: <input type="password" id="loginpassw" class="input-text" name="loginpassw" onkeypress="var _e=(String(typeof(event))=='undefined')?self.event:event;var _v=_e?parseInt(_e.which||_e.keyCode||0):0;if(_v==13||_v==10)this.form.submit();else return true;" />
+		<div class="gumbi"><a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#" class="gumb" onclick="document.login.submit();">&nbsp;Prijava&nbsp;</a></div>
+	</form>
+</div></div>
+																		<a name="mod_static3"></a>
+															<div class="mod-lijevo-head">
+								
+								<div class="mod-head-in">Kada zvoni</div>
+								</div>
+														<div class="mod-lijevo-body"><div class="mod-body-in">
+
+	<a name="s3-1806" id="s3-1806"></a>
+	<p>Razredna nastava</p>
+
+<p><img alt="" src="upload/os-fvsignjara-virje/images/static3/1806/Image/raznas.jpg" style="width: 170px; height: 251px;" /></p>
+
+<p>Predmetna nastava</p>
+
+<p><a href="upload/os-fvsignjara-virje/images/static3/1806/Image/zvono.jpg" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1806/Image/zvono.jpg" style="width: 170px; height: 246px;" /></a></p>
+
+<div id="st3_documents_52_1806_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div>
+																								<a name="mod_static3"></a>
+														<div class="mod-lijevo-body"><div class="mod-body-in">
+
+	<a name="s3-1500" id="s3-1500"></a>
+	<p><a href="http://ina.hr"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1500/Image/inalogo.jpg" style="width: 150px; height: 55px;" /></a></p>
+
+<p><a href="index.html,news_id=3293.html#mod_news">Zeleni pojas 2021</a><a href="index.html,news_id=3293.html#mod_news">.</a></p>
+
+<p><a href="index.html,news_id=2954.html#mod_news">Sponzor kružne klupe u vrtnoj učionici 2020.</a></p>
+
+<p>Sponzor ozvučenja multimedijalne glazbene dvorane 2019.</p>
+
+<p>Sponzor obnavljanja ružičnjaka u &scaron;kolskom vrtu 2017.</p>
+
+<div id="st3_documents_52_1500_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div>
+																								<a name="mod_static3"></a>
+														<div class="mod-lijevo-body"><div class="mod-body-in">
+
+	<a name="s3-1647" id="s3-1647"></a>
+	<p><a href="upload/os-fvsignjara-virje/images/static3/1122/File/MaliV2024.pdf" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1122/Image/MV2024.jpg" style="width: 150px; height: 213px;" /></a></p>
+
+<div id="st3_documents_52_1647_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div>
+																</div>
+				</div>
+
+				<div id="glavni-stupac">
+															<a name="mod_news"></a>
+													<div class="glavni-zaglavlje">
+								Uređivanje vijesti
+								
+							</div>
+												<div class="glavni-shadow-in">
+							<div class="glavni-stupac-header"><img src="img/themes/modern/3/images/bg_glavni_header_l.gif" alt="" /></div>
+							<div class="glavni-iznutra" >
+<script type="text/javascript">
+<!--
+        function manipulate_newsform() {
+                document.newsform.action = document.newsform.action.replace(/#mod_news/g,'#calnws');
+                document.newsform.submit();
+        }
+
+	function newsCheckSubmit(form) {
+					if (form.news_type != null)
+				if (getSelectedRadioValue(form.news_type) == '4') {
+					alert('Morate unijeti događaj u kalendaru prije spremanja!');
+					return false;
+				}
+				if (form.news_date.value.trim()=='') {
+			alert('Morate unijeti datum!');
+			return false;
+		}
+
+    		if (document.id('news_authors')) {
+			if (document.id('news_authors').value.trim() == '') {
+				alert('Morate unijeti autora vijesti!\nUkoliko niste sigurni tko je autor možete odabrati Nepoznat ili Vanjski.');
+				window.location = '#mod_news';
+				return false;
+			}
+		}
+	}
+
+
+function newsPreview(form) {
+	if (newsCheckSubmit(form)!=false) {
+		win=window.open('about:blank','preview','toolbars=0,scrollbars=1');
+		form.target='preview';
+		setTimeout('document.newsform.target=\'\'',1000);
+		return true;
+	}
+	return false;
+}
+
+
+
+function news_calentry_popup(selfbase, selfkat, news_id_nextval, news_cal_evt_id) {
+	var window_url = selfbase + '/calentry';
+	window_url += '?cal_thiskat=' + selfkat;
+	window_url += '&cal_selfsubmit=nwscal' + news_id_nextval;
+	if (news_cal_evt_id) {
+		window_url += '&cal_ID=' + news_cal_evt_id;
+	} else {
+		window_url += '&cal_title=' + (URLEncode(EntEncode(document.newsform.news_title.value)));
+		window_url += '&cal_content=' + URLEncode(EntEncode((document.newsform.news_lead.value)));
+		window_url += '&cal_thiskat=' + selfkat;
+		window_url += '&cal_TS=' + document.newsform.news_date.value;
+		window_url += '&cal_allday=t';
+	}
+	var neww = window.open(window_url,
+				'newentry',
+				' toolbar=0,scrollbars=yes,location=0,statusbar=0,menubar=0,resizable=yes,width=440,height=400');
+	neww.focus();
+	return;
+}
+
+window.addEvent('domready', function() {
+
+		$$('.save_button').addEvent('click', function(){
+		    var news_title = document.id('news_title');
+		    if( (news_title.get('value') == null) || (news_title.get('value').length == 0) )
+		    {
+				alert('Niste upisali naslov vijesti');
+				return false;
+		    }
+		});
+					
+});
+
+
+
+//-->
+
+</script>
+
+<form action="index.html#mod_news" method="post" enctype="multipart/form-data" name="newsform" id="newsform">
+	<input type="hidden" name="news_ed" value="1" />
+	<input type="hidden" name="news_id" value="0" />
+	<input type="hidden" name="mshow" value="290" />
+	<div class="left" >
+		<input type="submit" class="button2 save_button" name="news_save" value="Spremi" onclick="return newsCheckSubmit(this.form);" />
+		<input type="submit" class="button2" name="news_cancel" value="Odustani" />
+	</div>
+	<div class="right">
+		<input type="submit" class="button2" onclick="return newsPreview(this.form);" name="news_preview_leads" value="Pregledaj uvod" />
+		<input type="submit" class="button2" onclick="return newsPreview(this.form);" name="news_preview" value="Pregledaj" />
+	</div>	
+	<div class="clearall"></div>
+
+	<br />
+	
+			<input type="hidden" name="news_id_nextval" value="4342" />
+	
+
+
+	<label for="news_title">Naslov:</label><br />
+	<input type="text" name="news_title" id="news_title" value="" size="63" class="required" />
+	<br />
+	
+	<br />
+
+	<div class="left" style="width:28%">
+		<label for="news_date">Datum:</label><br /><input type="text" id="datepicker_news_date" value="08. 01. 2025. 09:31" class="datetimepicker " size="16" readonly='readonly'/>
+<input type="text" name="news_date" id="news_date" value="2025-01-08 09:31:39" style="visibility:hidden;width:1%" />
+<script type="text/javascript">
+window.addEvent('domready', function() {
+		Date.defineFormats({
+			date: '%Y-%m-%d',
+			datetime: '%Y-%m-%d %H:%M:%S',
+			hr_date: '%d. %m. %Y.',
+			hr_datetime: '%d. %m. %Y. %H:%M'
+		});
+		Date.defineParser( '%d. %m. %Y.( %X)?' ); /* hr date parser */
+		
+		new Picker.Date($$('.datetimepicker'), {
+			pickerClass: 'datepicker_vista',
+			format: 'hr_datetime',
+			allowEmpty: true, /* deprecated */
+			onSelect: function (date) {
+				var submitElementID=this.input.get('id').substr(11); /* strlen('datepicker_') == 11 */
+				$(submitElementID).value=date.format('datetime');
+			}
+			,
+		timePicker: true
+		});
+		
+		$$('.datetimepicker').addEvent('keydown', function(e){
+			if (e.key=='delete') {
+				$(e.target.id).value='';
+				$(e.target.id.substr(11)).value='';
+			}
+		});
+	});
+</script>
+
+	</div>
+
+	<div class="left" style="width:25%">
+		<label for="news_lang_id">&nbsp;&nbsp;Jezik:</label><br />
+		<select id="news_lang_id" name="news_lang_id">
+					<option value="1" selected="selected">Croatian</option>
+					<option value="2">English</option>
+				</select>
+	</div>
+
+	<div class="left" style="width:47%">
+		<label for="news_source">Izvor:</label><br /><input type="text" id="news_source" name="news_source" value="" size="33" />
+	</div>
+
+	<div class="clearall"></div><br />
+
+	<div class="left" style="width:50%">
+		<label for="news_authors_select">Autor(i):</label><br />
+		<table cellspacing="0" cellpadding="0" width="10%">
+			<tr>
+				<td id='news_authors_place'>
+				</td>
+			</tr>
+		</table>
+	<input type="button" value="Dodaj idućeg" onclick="addSig('news_authors');return false;" />
+	</div>
+	<div class="left" style="width:50%">
+		<label for="news_kw">Ključne riječi (odvojene zarezom):&nbsp;</label><br /><textarea id="news_kw" name="news_kw" cols="30" rows="3"></textarea>
+	</div>		
+	<div class="clearall"></div>
+
+
+	<br /><br />
+	<fieldset style="padding-left:5px; padding-bottom:5px;">
+
+		<legend>Slika sažetka</legend>
+
+					<label for="news_upload_image">Postavi sliku sažetka:&nbsp;</label>
+			<input type="file" name="news_upload_image" id="news_upload_image" />
+			<br />
+			<label for="resize_to">Promijeni veličinu na:</label>
+			<select name="resize_to" id="resize_to">
+				<option value="0">ostavi original</option>
+				<option value="100" selected="selected">100px širine</option>
+				<option value="150">150px širine</option>
+				<option value="200">200px širine</option>
+				<option value="250">250px širine</option>
+				<option value="300">300px širine</option>
+			</select>
+			<input type="submit" name="news_edit_refresh" value="Postavi" />
+				<br /><br />
+		<label for="lead_image_desc">Opis slike sažetka:</label>
+		<input type="text" name="lead_image_desc" value="" size="33" id="lead_image_desc" class="maxLength:100" />
+		<br />
+	</fieldset>
+
+	<br /><br /><br />
+	Uvod:&nbsp;<br />
+	<textarea rows="1" cols="1" id="news_lead" name="news_lead"></textarea><input type="hidden" name="fckeditor_normalize_links[]" value="news_lead" /><script type='text/javascript' src='inc/ckeditor/ckeditor.js'></script><script type='text/javascript'>
+	<!--
+	var editor=CKEDITOR.replace('news_lead', {
+		filebrowserBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=files',
+filebrowserImageBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=image',
+filebrowserFlashBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=flash',
+
+		customConfig : '/inc/ckeditor/strix_config.js'
+		
+		, height: 300,
+			enterMode:CKEDITOR.ENTER_P
+	})
+	-->
+	</script>
+
+	<br /><br />
+	Sadržaj:&nbsp;<br />
+	<textarea rows="1" cols="1" id="news_content" name="news_content"></textarea><input type="hidden" name="fckeditor_normalize_links[]" value="news_content" /><script type='text/javascript'>
+	<!--
+	var editor=CKEDITOR.replace('news_content', {
+		filebrowserBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=files',
+filebrowserImageBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=image',
+filebrowserFlashBrowseUrl : '/inc/ckeditor/elfinder/elfinder.php?folder=images/newsimg/4342/&type=flash',
+
+		customConfig : '/inc/ckeditor/strix_config.js'
+		
+		, height: 500,
+			enterMode:CKEDITOR.ENTER_P
+	})
+	-->
+	</script>
+
+	
+	<br /><br />
+
+
+	
+
+	<a name="attachdoc"></a>
+
+	<br />
+	Priloži dokument:&nbsp;
+	<br />
+	<input type="file" name="news_attach_file[]" />
+	<input type="submit" name="news_edit_refresh" value="Postavi" onclick='this.form.action=this.form.action.replace(/\#mod_news/g,"#attachdoc");' />
+
+	<br /><br /><br />
+
+	  		<input type="checkbox" id="news_discussion" name="news_discussion" value="checked" checked="checked" />
+		<label for="news_discussion">&nbsp;Dopusti diskusiju</label>
+		<br />
+		<label for="news_comments_to">Odaberite forum za komentare: </label><br />
+		<select name="news_comments_to" id="news_comments_to"><option value="null" ></option></select>
+	
+	<input type="hidden" name="news_visible" value="checked" /> <!-- Visible -->
+	<br /><br />
+
+	<a name="catrel"></a>
+	<hr />
+
+	<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#" onclick="InvertVisibility('roll_0nws_crd');SwapImage('/img/themes/modern/3', 'roll_img_0nws_crd', 'blue_arrow_roll.gif', 'blue_arrow_upleft_roll.gif');UpdateRollPreferences('roll_0nws_crd');return false;"><img src="img/themes/default/images/blue_arrow_roll.gif" id="roll_img_0nws_crd" border="0" width="13" height="10" alt="" />Uredi postavke vezane za stranicu</a><div id='roll_0nws_crd' style="display:none;">	<br />
+
+		
+					<input type="hidden" name="news_katdata[0][kategorija_id]" value="1" />
+			<input type="hidden" name="news_katdata[0][kategorija_name]" value="Naslovnica" />
+			<input type="hidden" name="news_katdata[0][kategorija_url]" value="/" />
+			<input type="hidden" name="news_katdata[0][site_name]" value="Osnovna škola prof. Franje Viktora Šignjara Virje" />
+			Svojstva na&nbsp;
+			<a href="index.html#mod_news" target="_blank">Osnovna škola prof. Franje Viktora Šignjara Virje : Naslovnica</a>
+			<br /><br />
+			<div class="left" style="width:50%">
+				Vrijeme aktivacije:&nbsp;<br />
+				<input type="text" id="datepicker_news_katdata_0__news_atime_" value="" class="datetimepicker " readonly='readonly'/>
+<input type="text" name="news_katdata[0][news_atime]" id="news_katdata_0__news_atime_" value="" style="visibility:hidden;width:1%" />
+
+			</div>
+			<div class="left" style="width:50%">
+				Vrijeme isteka:&nbsp;<br />
+				<input type="text" id="datepicker_news_katdata_0__news_etime_" value="" class="datetimepicker " readonly='readonly'/>
+<input type="text" name="news_katdata[0][news_etime]" id="news_katdata_0__news_etime_" value="" style="visibility:hidden;width:1%" />
+
+			</div>
+			<div class="clearall"></div>
+
+			<input type="hidden" name="news_katdata[0][news_canedit]" value="" />
+			<input type="checkbox" name="news_katdata[0][news_approved]" id="news_katdata_0_approved" value="checked"  onclick="alert('You don\'t have permission for this action'); return false;"; /> 
+			<span style="font-size: 10px;"><label for="news_katdata_0_approved">Odobreno</label></span>
+				&nbsp;&nbsp;&nbsp;
+			<input type="checkbox" name="news_katdata[0][news_archived]" id="news_katdata_0_archived" value="checked"  onclick="alert('You don\'t have permission for this action'); return false;"; />
+			<span style="font-size: 10px;"><label for="news_katdata_0_archived">Arhivirano</label></span>
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+			<input type="hidden" name="news_katdata[0][news_highlighted]"  />
+						<br /><br />
+			<hr />
+		
+		
+			<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#" onclick="InvertVisibility('roll_0nws_map');SwapImage('/img/themes/modern/3', 'roll_img_0nws_map', 'blue_arrow_roll.gif', 'blue_arrow_upleft_roll.gif');UpdateRollPreferences('roll_0nws_map');return false;"><img src="img/themes/default/images/blue_arrow_roll.gif" id="roll_img_0nws_map" border="0" width="13" height="10" alt="" />Predloži ili objavi na drugim stranicama</a><div id='roll_0nws_map' style="display:none;">			<br />
+							<div class="left" style="width:17%"><label for="news_suggest">Predloži u:</label></div>
+				<div class="left" style="width:65%">
+					<select name="news_suggest[]" id="news_suggest" multiple="multiple" size="7" style="width:300px;">
+																		<optgroup label="Osnovna škola prof. Franje Viktora Šignjara Virje">
+												<option value="5451">Područni odjeli > Miholjanec</option>
+						</optgroup>										</select>
+				</div>
+				<div class="left" style="width:10%">
+					<input type="submit" name="news_suggest_button" value="Predloži" onclick='this.form.action=this.form.action.replace(/\#mod_news/g,"#catrel");' />
+				</div>
+				<div class="clearall"></div>
+				<br />
+			
+						</div>			</div>
+	<hr />
+
+	
+		<a name="calnws"></a>
+			<a href="javascript:news_calentry_popup('', '1', '4342');">
+			<img src="img/themes/modern/3/images/blue_arrow_roll.gif" border="0" width="13" height="10" alt="" />Događaj u kalendaru
+		</a>
+				<hr />
+		
+		<br />
+	<input type="submit" class="button2 save_button" name="news_save" value="Spremi" onclick="return newsCheckSubmit(this.form);" />
+	<input type="submit" class="button2" name="news_cancel" value="Odustani" />
+	<br /><br />
+
+</form></div>
+							<div class="clearall"></div>
+						</div>
+													</div>
+
+				<div id="desni-stupac">
+					<div id="desni-stupac-kut-dg"></div>
+					<div id="desno-inside">
+																		<a name="mod_search3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Tražilica</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in"><form action="search.html" id="search_form" name="search_form" method="get">
+	<input type="hidden" name="s3_nr" value="25" />
+	<input type="hidden" name="s3_skip" value="1" />
+		<input name="s3q" type="text" class="input-text" style="width: 98%;" /><br />
+			<div align="left" style="padding-top:5px;">
+			<a href="search.html" title="Napredno pretraživanje sadržaja školskog weba">Napredno pretraživanje</a>
+		</div>
+		<div class="gumbi"><input name="Submit" type="submit" value="Traži" /></div>
+</form>
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Kalendar</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1804" id="s3-1804"></a>
+	<p><a href="upload/os-fvsignjara-virje/images/static3/1804/Image/SIJE&#x10C;ANJ&#32;1.jpg" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1804/Image/SIJE&#x10C;ANJ&#32;1.jpg" style="width: 200px; height: 113px;" /></a></p>
+
+<p><a href="upload/os-fvsignjara-virje/images/static3/1804/Image/SIJE&#x10C;ANJ&#32;1.jpg">Za povećanje klikni na sliku ili ovdje.</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div id="st3_documents_52_1804_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Jelovnik</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1805" id="s3-1805"></a>
+	<p><a href="_kolska_kuhinja/jelovnik_po_mjesecima.html"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1805/Image/jelovnikslika.jpg" style="width: 200px; height: 200px;" /></a></p>
+
+<div id="st3_documents_52_1805_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Zlatna jabuka</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1812" id="s3-1812"></a>
+	<p><a href="skola/ploca,news_hk=5259&amp;news_id=4049&amp;mshow=303.html#mod_news"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1812/Image/zljabukaweb.jpg" style="width: 200px; height: 227px;" /></a></p>
+
+<div id="st3_documents_52_1812_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Školska shema</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1803" id="s3-1803"></a>
+	<p><a href="https://www.apprrr.hr/skolska-shema-2023-2024/" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1803/Image/projekt-shema-&#x161;kolskog-vo&#x107;a-i-povr&#x107;a.png" style="width: 200px; height: 201px;" /></a></p>
+
+<p><a href="https://skolskashema.mps.hr" target="_blank">O projektu pročitajte i ovdje.</a></p>
+
+<div id="st3_documents_52_1803_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Prilika za sve</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1866" id="s3-1866"></a>
+	<p><a href="upload/os-fvsignjara-virje/images/static3/1866/File/Prilika&#32;za&#32;sve&#32;7&#32;banner.pdf" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1866/Image/prilika&#32;za&#32;sve.jpg" style="width: 200px; height: 420px;" /></a></p>
+
+<div id="st3_documents_52_1866_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+
+<div id="st3_documents_52_1865_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+
+<div id="st3_documents_52_1864_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+
+<div id="st3_documents_52_1863_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1629" id="s3-1629"></a>
+	<p>Mala &scaron;kola roditeljstva</p>
+
+<p><a href="https://sites.google.com/view/malaskolaroditeljstva/po%C4%8Detna-stranica" target="_blank"><img alt="" src="upload/os-fvsignjara-virje/images/static3/1629/Image/malaskolarod.jpg" style="width: 200px; height: 100px;" /></a></p>
+
+<p>Sve o maloj &scaron;koli roditeljstava pronađite <a href="https://sites.google.com/view/malaskolaroditeljstva/po%C4%8Detna-stranica" target="_blank">ovdje.</a></p>
+
+<div id="st3_documents_52_1629_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_static3"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">MALA PRKAČIJADA</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+
+	<a name="s3-1188" id="s3-1188"></a>
+	<p>Sve o 1. i&nbsp;2.&nbsp; Maloj virtualnoj prkačijadi <a href="https://sites.google.com/view/malavirovskaprkacijada/po%C4%8Detna-stranica?fbclid=IwAR1NSxW2BpTXzPbe0pj4NVmC9SG388vV7w0LA8yme90L_GkKfKWCcD2rrV8">pranađite ovdje.</a></p>
+
+<p>&nbsp; &nbsp;<a href="http://sites.google.com/view/malavirovskaprkacijada/po%C4%8Detna-stranica?fbclid=IwAR1NSxW2BpTXzPbe0pj4NVmC9SG388vV7w0LA8yme90L_GkKfKWCcD2rrV8"><img alt="Prkači" src="upload/os-fvsignjara-virje/images/static3/1188/Image/prka&#x10D;i.jpg" style="width: 150px; height: 100px;" /></a></p>
+
+<div id="st3_documents_52_1188_1">
+	
+
+</div>
+<div class="clearall"></div>
+
+
+
+</div></div><br />
+																								<a name="mod_calendar"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Kalendar</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">
+<script type="text/javascript">
+	function cal_newpopup() {
+				document.entryform.cal_Entry.value="new";
+				neww = window.open("", "newentry", " toolbar=0,scrollbars=yes,location=0,statusbar=0,menubar=0,resizable=yes,width=460,height=380");
+				document.entryform.submit();
+				neww.focus();
+	}
+</script>
+
+
+<!-- Anonimnim korisnicima nije dopušten unos u kalendar. -->
+
+<table width="100%" class="cal-month m-small">
+<tr class="monthTitle"> 
+	<td colspan="7">
+		<a href="index.html,cal_ts=1733007600.html#mod_calendar">&laquo;</a> 
+			<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html" onclick="neww = window.open('/200?cal_vkat=60&amp;cal_view=month', 'calpopup', 'toolbar=0,scrollbars=yes,location=0,statusbar=0,menubar=0,resizable=yes,width=600,height=520');neww.focus();return false;">Siječanj 2025</a>
+	            	<a href="index.html,cal_ts=1738364400.html#mod_calendar">&raquo;</a>
+	</td>
+</tr>
+
+<tr class="weekday"> 
+	<td>Po</td>
+	<td>Ut</td>
+	<td>Sr</td>
+	<td>Če</td>
+	<td>Pe</td>
+	<td>Su</td>
+	<td>Ne</td>
+</tr>
+
+
+<tr class="days"> 
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">30 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">31 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">1 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">2 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">3 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">4 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">5 </span>
+				</td>
+</tr>
+<tr class="days"> 
+	<td class="
+			">
+
+	 
+		  
+			<span class="">6 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">7 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_danas
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_danas">8 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">9 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">10 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">11 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">12 </span>
+				</td>
+</tr>
+<tr class="days"> 
+	<td class="
+			">
+
+	 
+		  
+			<span class="">13 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">14 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">15 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">16 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">17 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">18 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">19 </span>
+				</td>
+</tr>
+<tr class="days"> 
+	<td class="
+			">
+
+	 
+		  
+			<span class="">20 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">21 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">22 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">23 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">24 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">25 </span>
+				</td>
+	<td class="
+		cal_weekend	">
+
+	 
+		  
+			<span class="">26 </span>
+				</td>
+</tr>
+<tr class="days"> 
+	<td class="
+			">
+
+	 
+		  
+			<span class="">27 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">28 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">29 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">30 </span>
+				</td>
+	<td class="
+			">
+
+	 
+		  
+			<span class="">31 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+		cal_weekend	">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">1 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+		cal_weekend	">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">2 </span>
+				</td>
+</tr>
+<tr class="days"> 
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">3 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">4 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">5 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">6 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+			">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">7 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+		cal_weekend	">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">8 </span>
+				</td>
+	<td class="mod_tijelo_kalendar_prosli
+		cal_weekend	">
+
+	 
+		  
+			<span class="mod_tijelo_kalendar_prosli">9 </span>
+				</td>
+</tr>
+</table>
+
+<div class="mod_gumbici" style="width:100%;">
+<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#" onclick="InvertVisibility('roll_cal_setdisp');UpdateRollPreferences('roll_cal_setdisp');return false;">Prikazani događaji</a><div id='roll_cal_setdisp' style="display:none;"><div class="clearall"></div>
+<form method="post" action="index.html#mod_calendar" class="cal-show">
+
+<fieldset>
+
+
+
+	<input type="hidden" name="cal_shown[_tempered]" value="true" />
+	<input type="hidden" name="cal_shown[local]" value="true" />
+	<input id="frm-cal-shown-all" onclick="this.form.submit()" type="checkbox" name="cal_shown[all]"  />
+	<label for="frm-cal-shown-all">Svi događaji na portalu</label>
+	</fieldset>
+</form>
+</div></div>
+<br />
+
+</div></div><br />
+																								<a name="mod_rss"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Oglasna ploča</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">														<div class="mod_tijelo_oglasna">
+	<ul>
+				<li><a href="http://www.os-fvsignjara-virje.skole.hr/skola/ploca?news_id=4049" title="Zlatna jabuka">Zlatna jabuka</a></li>
+			</ul>
+</div>
+
+    <div class="mod_gumbici"><a href="skola/ploca.html" title="ostale obavijesti">&gt;&gt;</a></div>
+						<div class="clearall"></div>
+	</div></div><br />
+																																			<a name="mod_links2"></a>
+														<div class="mod-desno-body"><div class="mod-body-in">Lista linkova je prazna
+
+</div></div><br />
+																								<a name="mod_links2"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Korisni linkovi</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="18" class="rss-bg-gumbic"><div class="mod-podnaslov"><div class="pld3">Korisni linkovi</div></div></td><td width="12" align="center" class="rss-bg-gumbic" height="18"><img onclick="InvertVisibility('roll_0link2331');SwapImage('/img/themes/modern/3', 'roll_img_0link2331', 'podmeni-otvori-off.gif', 'podmeni-zatvori-off.gif');UpdateRollPreferences('roll_0link2331');return false;" src="img/themes/modern/3/images/podmeni-zatvori-off.gif" id="roll_img_0link2331" alt="" /></td></tr></table><div id='roll_0link2331' style="display:block;"><table width="100%" border="0" cellspacing="1" cellpadding="2"><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=12&amp;url=https%3A%2F%2Fwww.upisi.hr%2Fupisi%2F" target="_blank" title="Upisi u srednje škole">Upisi u srednje škole</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=15&amp;url=http%3A%2F%2Fwww.hgk.hr%2Fzupanijska-komora-koprivnica%2Fsto-cu-biti-kad-odrastem" target="_blank" title="Promocija strukovnih zanimanja">Promocija strukovnih...</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=26&amp;url=http%3A%2F%2Fwww.pou-kop.hr%2F" target="_blank" title="Pučko otvoreno učilište Koprivnica">Pučko otvoreno učili...</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=27&amp;url=https%3A%2F%2Fwww.psz-kckzz.hr%2F" target="_blank" title="Strukovna zanimanja">Strukovna zanimanja</a></td></tr></table></div><!-- razmak --><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td><img src="img/themes/modern/3/images/spacer.gif" alt="" border="0" width="100" height="4" /><br /></td></tr></table>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="18" class="rss-bg-gumbic"><div class="mod-podnaslov"><div class="pld3">Školstvo</div></div></td><td width="12" align="center" class="rss-bg-gumbic" height="18"><img onclick="InvertVisibility('roll_1link2331');SwapImage('/img/themes/modern/3', 'roll_img_1link2331', 'podmeni-otvori-off.gif', 'podmeni-zatvori-off.gif');UpdateRollPreferences('roll_1link2331');return false;" src="img/themes/modern/3/images/podmeni-zatvori-off.gif" id="roll_img_1link2331" alt="" /></td></tr></table><div id='roll_1link2331' style="display:block;"><table width="100%" border="0" cellspacing="1" cellpadding="2"><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=9&amp;url=https%3A%2F%2Fmzo.hr%2F" target="_blank" title="Ministarstvo znanosti, obrazovanja i sporta">Ministarstvo znanost...</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=10&amp;url=http%3A%2F%2Fwww.azoo.hr%2F" target="_blank" title="Agencija za odgoj i obrazovanje">Agencija za odgoj i ...</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=11&amp;url=http%3A%2F%2Fettaedu.azoo.hr%2F" target="_blank" title="Stručni skupovi">Stručni skupovi</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=13&amp;url=https%3A%2F%2Fwww.upisi.hr%2Fupisi%2F" target="_blank" title="Upisi u srednje škole">Upisi u srednje škole</a></td></tr><tr><td>&nbsp;&bull;&nbsp;<a href="http://os-fvsignjara-virje.skole.hr/redir_links2.php?l_id=14&amp;url=http%3A%2F%2Fupisi.weebly.com%2F" target="_blank" title="Portal o upisima u srednju školu">Portal o upisima u s...</a></td></tr></table></div><!-- razmak --><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td><img src="img/themes/modern/3/images/spacer.gif" alt="" border="0" width="100" height="4" /><br /></td></tr></table>
+	
+</div></div><br />
+																								<a name="mod_rss"></a>
+															<div class="mod-head-desno">
+								
+								<div class="mod-head-in">Arhiva dokumenata</div>
+								</div>
+														<div class="mod-desno-body"><div class="mod-body-in">															<a href="http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=153&amp;dm_dnl=1" class="doc_docx" style="clear: left">Interdisciplinarna primjena ra&#269;unalnog razmi&#353;ljanja (1).docx</a><br />
+	<a href="http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=152&amp;dm_dnl=1" class="doc_docx" style="clear: left">Matemati&#269;ka logika.docx</a><br />
+	<a href="http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=156&amp;dm_dnl=1" class="doc_pptx" style="clear: left">rad s dijelovima crte&#382;a.pptx</a><br />
+	<a href="http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=116&amp;dm_dnl=1" class="doc_pdf" style="clear: left">UPUTE ZA KORI&#352;TENJE microbit1.pdf</a><br />
+	<a href="http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=154&amp;dm_dnl=1" class="doc_docx" style="clear: left">Upute za on line programiranje u Pythonu (1).docx</a><br />
+<br />
+<div class="mod_gumbici"><a href="dokumenti.html" >Dokumenti &gt;&gt;</a></div><br />						<div class="clearall"></div>
+	</div></div><br />
+																</div>
+					<div id="desni-stupac-footer"><div id="desni-stupac-footer-l"></div><div id="desni-stupac-footer-d"></div></div>
+				</div>
+
+				<div style="clear:both;display:block;width:955px;margin-bottom:40px;"><br /><br /><br />
+					<div id="footer" style="position:absolute;">
+						<div style="position:absolute;left:10px;top:-13px;"><a href="http://www.carnet.hr/cms_za_skole" target="_blank"><img src="img/themes/default/images/cms-logo.png" alt="CMS za škole logo" /></a></div>
+						Osnovna škola prof. Franje Viktora Šignjara Virje / <a href="index.html">os-fvsignjara-virje.skole.hr</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-sjena"></div>
+	</center>
+	<a href="index.html,news_id=0&amp;news_ed=1&amp;news_type=1&amp;mshow=290.html#lijevi-stupac" class="skipper">preskoči na navigaciju</a>
+	
+	
+		</body>
+</html>
