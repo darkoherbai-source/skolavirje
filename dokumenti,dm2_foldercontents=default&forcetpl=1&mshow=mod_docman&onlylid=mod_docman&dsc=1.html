@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Osnovna škola prof. Franje Viktora Šignjara Virje - Dokumenti</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<meta http-equiv="Content-Language" content="hr" />
+<meta name="keywords" content="CMS, ďż˝kole, CARNet " />
+<script type="text/javascript">
+			function JSSelector_Unselected_groupbuttonsonoff(obj) {
+				if (false) {
+        var group_separator = '--';
+        var name_separator = '/';
+        
+        if (JSSelector_isSelectionGrouped(obj, group_separator, name_separator)) {
+          self.document.getElementById('jsselect_ungroup_button').style.display = '';
+        } else {
+          self.document.getElementById('jsselect_ungroup_button').style.display = 'none';
+        }
+        
+        if (JSSelector_multipleSelected(obj)) {
+          self.document.getElementById('jsselect_group_button').style.display = '';
+        } else {
+          self.document.getElementById('jsselect_group_button').style.display = 'none';
+        }
+        }
+      }
+		</script>
+
+<style type="text/css">a.strix-popup{visibility:hidden}</style><script type="text/javascript" src="inc/js/mootools-core-1.4.5-full-nocompat-yc.js,1333452434"></script>
+<script type="text/javascript" src="inc/js/mootools-more-1.4.0.1.js,1359987538"></script>
+<script type="text/javascript" src="inc/js/mocha/mocha-core-window-modal-mt14.js,1364290017"></script>
+<script type="text/javascript" src="inc/js/cms-init1.3.js,1380792939"></script>
+<script type="text/javascript" src="inc/js/milkbox2.2-mt1.3patch.js,1308061533"></script>
+<script type="text/javascript" src="inc/js/jsselector.js,1308061533"></script>
+<link rel="stylesheet" href="img/themes/default/strix4-default.css,1319551645.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/Window.css,1308061506.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/milkbox/milkbox.css,1308061506.css" type="text/css" />
+
+<link rel="shortcut icon" type="image/ico" href="img/themes/default/images/icons/strix.ico" />
+<link rel='stylesheet' href='img/themes/default/master.css,1308061506.css' type='text/css' />
+</head>
+
+<body id="body" onload=";JSSelector_AddSubmitHandler('docman_sc');"  >
+
+<div>
+	<form method="get" action="dokumenti.html">
+		<input type=hidden name=docman_sc_selectsubmit value=1>
+	<input type=hidden name="dm2_foldercontents" value="default"><input type=hidden name="forcetpl" value="1"><input type=hidden name="mshow" value="mod_docman"><input type=hidden name="onlylid" value="mod_docman">
+	<table cellspacing="0" cellpadding="0" border="0"><tr><td><SELECT id="docman_sc_unselected" name="docman_sc_unselected[]" size="8" multiple onchange="JSSelector_unsetSelected('docman_sc');JSSelector_Unselected_groupbuttonsonoff(self.document.getElementById('docman_sc'));" class="JSSelector">
+<OPTION value="id">ID</OPTION><OPTION value="description">Opis</OPTION><OPTION value="keywords">Ključne riječi</OPTION><OPTION value="filesize">Veličina</OPTION><OPTION value="folder">Tip</OPTION><OPTION value="version_num">Verzija</OPTION><OPTION value="creation_time">Vrijeme kreiranja</OPTION><OPTION value="edit_time">Zadnja promjena</OPTION></SELECT>
+</td><td><table border=0><tr><td align="center"><input type="submit" value="&nbsp;&uarr;&nbsp;" onclick="JSSelector_MoveUp('docman_sc');if (this.blur) this.blur();return false;"></td></tr><tr><td>&nbsp;</td></tr><tr><td align="center"><input type="submit" value="&nbsp;&rarr;&nbsp;" onclick="JSSelector_Select('docman_sc');if (this.blur) this.blur();return false;"></tr></td><tr><td align="center"><input type="submit" value="&nbsp;&larr;&nbsp;" onclick="JSSelector_UnSelect('docman_sc');if (this.blur) this.blur();return false;"></tr></td><tr><td>&nbsp;</td></tr><tr><td align="center"><input type="submit" value="&nbsp;&darr;&nbsp;" onclick="JSSelector_MoveDown('docman_sc');if (this.blur) this.blur();return false;"></tr></td></table></td><td id="docman_sc_place"><SELECT id="docman_sc" name="docman_sc[]" size="8" multiple onchange="JSSelector_unsetSelected('docman_sc_unselected');JSSelector_Unselected_groupbuttonsonoff(this);" class="JSSelector">
+<OPTION value="title">Naslov</OPTION><OPTION value="author_data">Autor(i)</OPTION><OPTION value="name_native">Jezik</OPTION></SELECT>
+<input type="hidden" name="docman_sc[]" value="title"><input type="hidden" name="docman_sc[]" value="author_data"><input type="hidden" name="docman_sc[]" value="name_native"></td></tr><tr><td colspan="3" align="right"><input style="display:none" id="jsselect_group_button" type="submit" value="grupiraj" onclick="JSSelector_group(self.document.getElementById('docman_sc'),'--','/');if (this.blur) this.blur();return false;"><input style="display:none" id="jsselect_ungroup_button" type="submit" value="ungroup" onclick="JSSelector_ungroup(self.document.getElementById('docman_sc'),'--','/');if (this.blur) this.blur();return false;"></td></tr><tr><td colspan="3" align="right"><input type="submit" value="Odaberi stupce" ></td></tr></table>
+	</form>
+	</div>
+
+
+</body>
+</html>

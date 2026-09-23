@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Osnovna škola prof. Franje Viktora Šignjara Virje - Dokumenti</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<meta http-equiv="Content-Language" content="hr" />
+<meta name="keywords" content="CMS, ďż˝kole, CARNet " />
+<script language="JavaScript" type="text/javascript">
+        <!--
+          function showFolderDataDiv(id) {
+            var fr = self.parent.document.getElementById('contentframe');
+            if (fr) {
+              fr.src = '/dokumenti,dm2_foldercontents=' + id + '&forcetpl=1&mshow=mod_docman&onlylid=mod_docman';
+            } else {
+              alert('error');
+            }
+          }
+        //-->
+        </script>
+<style type="text/css">a.strix-popup{visibility:hidden}</style><script type="text/javascript" src="inc/js/mootools-core-1.4.5-full-nocompat-yc.js,1333452434"></script>
+<script type="text/javascript" src="inc/js/mootools-more-1.4.0.1.js,1359987538"></script>
+<script type="text/javascript" src="inc/js/mocha/mocha-core-window-modal-mt14.js,1364290017"></script>
+<script type="text/javascript" src="inc/js/cms-init1.3.js,1380792939"></script>
+<script type="text/javascript" src="inc/js/milkbox2.2-mt1.3patch.js,1308061533"></script>
+<script type="text/javascript" src="inc/js/docman/sorttable.js,1308061532"></script>
+<link rel="stylesheet" href="img/themes/default/strix4-default.css,1319551645.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/Window.css,1308061506.css" type="text/css" />
+<link rel="stylesheet" href="img/themes/default/milkbox/milkbox.css,1308061506.css" type="text/css" />
+
+<link rel="shortcut icon" type="image/ico" href="img/themes/default/images/icons/strix.ico" />
+<link rel='stylesheet' href='img/themes/default/master.css,1308061506.css' type='text/css' />
+</head>
+
+<body id="body"   onclick="nd();">
+
+<div>
+<script language="javascript" type="text/javascript">
+<!--
+	function setClipboard(mytext) {
+		if (window.clipboardData) {
+			// IE
+			window.clipboardData.setData("Text", mytext);
+
+		} else if (window.netscape) {
+			try {
+				netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+			} catch (e) {
+				alert("Vaš preglednik ne podržava ovu mogućnost zbog sigurnosnih postavki!");
+				return false;
+			}
+			var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+			if (!clip) return;
+			var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+   			if (!trans) return;
+			trans.addDataFlavor('text/unicode');
+			var str = new Object();
+			var len = new Object();
+			var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+			var copytext=mytext;
+			str.data=copytext;
+			trans.setTransferData("text/unicode",str,copytext.length*2);
+			var clipid=Components.interfaces.nsIClipboard;
+			if (!clip) return false;
+			clip.setData(trans,null,clipid.kGlobalClipboard);
+		}
+		return true;
+	}
+
+	function copyURL(urltext) {
+		if (setClipboard(urltext)) {
+		} else {
+			prompt('Could not copy link to clipboard. Here is the requested URL:', urltext);
+			return false;
+		}
+		return false;
+	}
+
+	function copyDocumentURL(id) {
+		copyURL('http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_document_id=' + id + '&dm_det=1#mod_docman');
+		return false;
+	}
+
+	function copyFolderURL(id) {
+		copyURL('http://www.os-fvsignjara-virje.skole.hr/dokumenti?dm_show_folder=' + id + '#mod_docman');
+		return false;
+	}
+
+//-->
+</script>
+
+<div class="docman">
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script type="text/javascript" src="inc/js/overlib/overlib_mini.js"></script>
+
+<div class="folderpath">
+	<span class="phplm">
+	<a onclick="showFolderDataDiv('0');return false;" href="dokumenti,dm_show_folder=0.html">Krovna mapa</a>	</span>
+</div>
+
+<table id="docman_folder" class="sortable" cellspacing="0" cellpadding="0" >
+			<tr>
+							<th>Naslov</th>
+							<th>Autor(i)</th>
+							<th>Jezik</th>
+					</tr>
+				
+																		<tr class="folder_items">
+	  					  					  					  					  					  				
+																					<td class="fi-title " style="background-image:url(img/themes/default/ikone/tree_folder_closed.png);background-repeat:no-repeat;">
+																			<a href="JavaScript:showFolderDataDiv('14')" 	  					onmouseover="return overlib('<strong>Jezik:&nbsp;</strong>Engleski<br /><strong>Vrijeme stvaranja:&nbsp;</strong>28. 8. 2013.<br /><br /><table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\' class=\'overlib-popup\'><tr><td>&nbsp;</td><td width=\'90%\'>&nbsp;</td></tr></table>',OFFSETX,10,OFFSETY,0,BGCOLOR,'#003366',FGCOLOR,'#ffffff',CAPTIONFONT,'tahoma',CAPTIONSIZE,2,RIGHT,STATUS,'Document properties',CAPTION,' <img src=&quot;/img/themes/default/ikone/tree_folder_closed.png&quot; align=&quot;absmiddle&quot; /> Dokumenti djelatnika&nbsp;&nbsp;&nbsp; ',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,700);" onmouseout="nd();"
+	  				 						oncontextmenu="return overlib(' <table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\'> <tr> <td style=\'padding-top:3px;background-color:#eeeeee;width:30px;\'> <a target=\'_top\' href=\'\' onclick=\'copyFolderURL(14);return false;\' ><img src=\'/img/themes/default/ikone/link.gif\' alt=\'Kopiraj Link\' title=\'Prikaži detalje\' align=\'right\' /></a> </td> <td style=\'padding-top:3px\'> <a href=\'\' class=\'dmpropop\' onclick=\'copyFolderURL(14);return false;\' >Kopiraj Link</a></td> </tr> <tr><td style=\'background-color:#eeeeee;width:30px;height:1px;\'></td><td><hr style=\'height:1px;\'></td></tr> </table>',OFFSETX,-15,OFFSETY,-15,BGCOLOR,'#003366',FGCOLOR,'#ffffff',RIGHT,STATUS,'Document properties',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,1);"
+	  				>Dokumenti djelatnika</a>
+																	</td>
+																												<td class="fi-author_data "></td>
+																												<td class="fi-name_native ">Engleski</td>
+																		</tr>
+																									<tr class="folder_items">
+	  					  					  					  					  					  				
+																					<td class="fi-title " style="background-image:url(img/themes/default/ikone/tree_folder_closed.png);background-repeat:no-repeat;">
+																			<a href="JavaScript:showFolderDataDiv('12')" 	  					onmouseover="return overlib('<strong>Jezik:&nbsp;</strong>Hrvatski<br /><strong>Autor:&nbsp;</strong>Admin <br /><strong>Vrijeme stvaranja:&nbsp;</strong>13. 11. 2006.<br /><strong>Vrijeme mijenjanja:&nbsp;</strong>13. 11. 2006.<br /><br /><table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\' class=\'overlib-popup\'><tr><td>&nbsp;</td><td width=\'90%\'>&nbsp;</td></tr></table>',OFFSETX,10,OFFSETY,0,BGCOLOR,'#003366',FGCOLOR,'#ffffff',CAPTIONFONT,'tahoma',CAPTIONSIZE,2,RIGHT,STATUS,'Document properties',CAPTION,' <img src=&quot;/img/themes/default/ikone/tree_folder_closed.png&quot; align=&quot;absmiddle&quot; /> korisno&nbsp;&nbsp;&nbsp; ',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,700);" onmouseout="nd();"
+	  				 						oncontextmenu="return overlib(' <table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\'> <tr> <td style=\'padding-top:3px;background-color:#eeeeee;width:30px;\'> <a target=\'_top\' href=\'\' onclick=\'copyFolderURL(12);return false;\' ><img src=\'/img/themes/default/ikone/link.gif\' alt=\'Kopiraj Link\' title=\'Prikaži detalje\' align=\'right\' /></a> </td> <td style=\'padding-top:3px\'> <a href=\'\' class=\'dmpropop\' onclick=\'copyFolderURL(12);return false;\' >Kopiraj Link</a></td> </tr> <tr><td style=\'background-color:#eeeeee;width:30px;height:1px;\'></td><td><hr style=\'height:1px;\'></td></tr> </table>',OFFSETX,-15,OFFSETY,-15,BGCOLOR,'#003366',FGCOLOR,'#ffffff',RIGHT,STATUS,'Document properties',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,1);"
+	  				>korisno</a>
+																	</td>
+																												<td class="fi-author_data ">Admin <br /></td>
+																												<td class="fi-name_native ">Hrvatski</td>
+																		</tr>
+																									<tr class="folder_items">
+	  					  					  					  					  					  				
+																					<td class="fi-title " style="background-image:url(img/themes/default/ikone/html.gif);background-repeat:no-repeat;">
+																			<a target="_top" href="dokumenti,dm_document_id=150&amp;dm_det=1.html" 	  					onmouseover="return overlib('<strong>Opis:&nbsp;</strong>Svake godine 20. listopada obilježava se Svjetski dan jabuka. Nizom aktivnosti učenici 1., 2. i 3. razreda obilježili su taj dan. Jabuke su bile tema priča koje su slu&scaron;ali, pjesama koje su pjevali te motiv likovnih radova. Ku&scaron;ali smo različite vrste jabuka i birali najslađu jabuku. Jabuka se smatra jednom od najzdravijih voćnih vrsta pa zato i ne čudi &scaron;to nosi naziv &bdquo;kraljica voća&ldquo;. U &scaron;kolskoj kuhinji smo dobro oprali ruke te zajedničkim snagama...<br /><strong>Jezik:&nbsp;</strong>Hrvatski<br /><strong>Autor:&nbsp;</strong><a href=\'/blue2/?userid=747\'>Maja Paska Šabatović</a><br /><strong>Vrijeme stvaranja:&nbsp;</strong>26. 10. 2021.<br /><strong>Vrijeme mijenjanja:&nbsp;</strong>26. 10. 2021.<br /><strong>Veličina:&nbsp;</strong><br /><br /><table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\' class=\'overlib-popup\'><tr><td>&nbsp;</td><td valign=\'center\'><a target=\'_top\' href=\'/dokumenti?dm_document_id=150&amp;dm_det=1#mod_docman\'><img src=\'/img/themes/default/images/icons/details1.gif\' alt=\'Prikaži detalje\' title=\'Prikaži detalje\' /></a></td><td align=\'center\'></td><td width=\'90%\'>&nbsp;</td></tr></table>',OFFSETX,10,OFFSETY,0,BGCOLOR,'#003366',FGCOLOR,'#ffffff',CAPTIONFONT,'tahoma',CAPTIONSIZE,2,RIGHT,STATUS,'Document properties',CAPTION,' <img src=&quot;/img/themes/default/ikone/html.gif&quot; alt=&quot;&quot; align=&quot;absmiddle&quot; class=&quot;icon&quot;/> No title&nbsp;&nbsp;&nbsp; ',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,700);" onmouseout="nd();"
+	  										oncontextmenu="return overlib(' <table width=\'100%\' cellspacing=\'0\' cellpadding=\'0\' border=\'0\'> <tr> <td style=\'padding-top:3px;background-color:#eeeeee;width:30px;\'> <a target=\'_top\' href=\'/dokumenti?dm_document_id=150&amp;dm_det=1#mod_docman\'><img src=\'/img/themes/default/images/icons/details1.gif\' alt=\'Prikaži detalje\' align=\'right\' /></a> </td> <td style=\'padding-top:3px\'><a target=\'_top\' href=\'/dokumenti?dm_document_id=150&amp;dm_det=1#mod_docman\' class=\'dmpropop\'>Detalji</a></td> </tr> <tr><td style=\'background-color:#eeeeee;width:30px;height:1px;\'></td><td><hr style=\'height:1px;\'></td></tr> <tr> <td style=\'padding-top:3px;background-color:#eeeeee;width:30px;\'> <a target=\'_top\' href=\'\' onclick=\'copyDocumentURL(150);return false;\' ><img src=\'/img/themes/default/ikone/link.gif\' alt=\'Kopiraj Link\' title=\'Prikaži detalje\' align=\'right\' /></a> </td> <td style=\'padding-top:3px\'> <a href=\'\' class=\'dmpropop\' onclick=\'copyDocumentURL(150);return false;\' >Kopiraj Link</a></td> </tr> <tr><td style=\'background-color:#eeeeee;width:30px;height:1px;\'></td><td><hr style=\'height:1px;\'></td></tr> </table>',OFFSETX,-15,OFFSETY,-15,BGCOLOR,'#003366',FGCOLOR,'#ffffff',RIGHT,STATUS,'Document properties',STICKY,CLOSETEXT,'<img align=&quot;top;&quot; src=&quot;/img/themes/default/images/icons/close.png&quot border=&quot;0&quot;>',DELAY,1);"
+	  				>No title</a>
+																	</td>
+																												<td class="fi-author_data "><a href="http://os-fvsignjara-virje.skole.hr/blue2/?userid=747">Maja Paska Šabatović</a><br /></td>
+																												<td class="fi-name_native ">Hrvatski</td>
+																		</tr>
+												</table>
+
+<br /><br /><br />
+
+
+<br />
+<div class="selcols"><a href="dokumenti,dm2_foldercontents=default&amp;forcetpl=1&amp;mshow=mod_docman&amp;onlylid=mod_docman&amp;dsc=1.html">Odaberi stupce</a></div>
+
+</div></div>
+
+
+</body>
+</html>
